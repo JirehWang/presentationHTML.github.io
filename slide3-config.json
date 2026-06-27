@@ -1,0 +1,223 @@
+{
+  "_readme": "編輯此檔案來修改 Slide 3 內容與順序，完成後執行 python update-slide3.py 即可自動更新 index.html 並修正連接線。",
+
+  "block1": {
+    "label": "區塊一：新家人接待與初步追蹤",
+    "theme": "green",
+    "nodes": [
+      {
+        "id": "1-1",
+        "step_label": "01 / Onboarding",
+        "icon": "log-in",
+        "title": "新家人初次蒞臨",
+        "subtitle": "現場接待點",
+        "type": "normal"
+      },
+      {
+        "id": "1-2",
+        "step_label": "02 / Setup",
+        "icon": "file-text",
+        "title": "現場接待與<br>協助填寫留名卡",
+        "subtitle": "新家人同工",
+        "type": "normal"
+      },
+      {
+        "id": "1-4",
+        "step_label": "03 / Matchmaking",
+        "icon": "users",
+        "title": "主日會後<br>邀請小組代表進行媒合",
+        "subtitle": "新家人同工",
+        "type": "normal"
+      },
+      {
+        "id": "1-3",
+        "step_label": "04 / Tracking",
+        "icon": "calendar",
+        "title": "初步追蹤 4週內：<br>了解適應狀況",
+        "subtitle": "新家人同工",
+        "type": "normal"
+      },
+      {
+        "id": "1-5",
+        "step_label": "05 / Evaluation",
+        "icon": "help-circle",
+        "title": "4週內結案評估",
+        "subtitle": "決策機制",
+        "type": "decision"
+      },
+      {
+        "id": "1-6",
+        "step_label": "是 (落戶)",
+        "icon": "check",
+        "title": "開始落戶程序：分派給指定小組",
+        "subtitle": "",
+        "type": "outcome-yes",
+        "connects_from": "1-5",
+        "label": "是"
+      },
+      {
+        "id": "1-7",
+        "step_label": "否 (結案)",
+        "icon": "archive",
+        "title": "請安拜訪結案：未再出現或去他處",
+        "subtitle": "",
+        "type": "outcome-no",
+        "connects_from": "1-5",
+        "label": "否"
+      }
+    ]
+  },
+
+  "block2": {
+    "label": "區塊二：系統觀察與轉介",
+    "theme": "blue",
+    "nodes": [
+      {
+        "id": "2-1",
+        "step_label": "01 / System",
+        "icon": "database",
+        "title": "主日點名系統",
+        "subtitle": "每週數據回報",
+        "type": "normal"
+      },
+      {
+        "id": "2-2",
+        "step_label": "02 / Analysis",
+        "icon": "bar-chart-2",
+        "title": "1個月內出席狀況",
+        "subtitle": "系統判定分流",
+        "type": "decision"
+      },
+      {
+        "id": "2-3",
+        "step_label": "第二次出席 (標準件)",
+        "icon": "user-check",
+        "title": "標準件：加入系統名單",
+        "subtitle": "",
+        "type": "outcome-yes",
+        "connects_from": "2-2",
+        "label": "第二次出席"
+      },
+      {
+        "id": "2-4",
+        "step_label": "間隔超過1個月 (觀察件)",
+        "icon": "eye",
+        "title": "觀察件：暫不加入，持續觀察",
+        "subtitle": "",
+        "type": "outcome-no",
+        "connects_from": "2-2",
+        "label": "間隔超過1個月"
+      },
+      {
+        "id": "2-5",
+        "step_label": "03 / Follow-up",
+        "icon": "clock",
+        "title": "後期追蹤 1-2個月：<br>觀察小組長是否新增名單",
+        "subtitle": "小組長定期回報",
+        "type": "normal",
+        "connects_from": "2-3"
+      },
+      {
+        "id": "2-6",
+        "step_label": "04 / Check",
+        "icon": "check-square",
+        "title": "是否於小組<br>實際出現？",
+        "subtitle": "最終確認",
+        "type": "decision"
+      },
+      {
+        "id": "2-7",
+        "step_label": "已出席 (順利融入)",
+        "icon": "heart",
+        "title": "程序完結：交由小組常態關懷",
+        "subtitle": "",
+        "type": "outcome-yes",
+        "connects_from": "2-6",
+        "label": "已出席"
+      },
+      {
+        "id": "2-8",
+        "step_label": "遲未出現 (轉介點)",
+        "icon": "alert-triangle",
+        "title": "持續關懷滿3個月：提報轉介",
+        "subtitle": "",
+        "type": "outcome-no",
+        "connects_from": "2-6",
+        "label": "遲未出現"
+      }
+    ]
+  },
+
+  "block3_floating": {
+    "id": "3-7",
+    "step_label": "04B / Care Group Takeover",
+    "icon": "heart-handshake",
+    "title": "關懷組接手",
+    "subtitle": "收治兩處高風險個案之轉介",
+    "connects_from": ["2-8", "3-3"],
+    "connect_label_from_2-8": "",
+    "connect_label_from_3-3": "否"
+  },
+
+  "block3": {
+    "label": "區塊三：常態收治與防護異常處理",
+    "theme": "orange",
+    "nodes": [
+      {
+        "id": "3-1",
+        "step_label": "01 / Observation",
+        "icon": "eye",
+        "title": "牧養組：每週數據觀察：<br>觀察禮拜/主日學出席",
+        "subtitle": "常態數據比對",
+        "type": "normal"
+      },
+      {
+        "id": "3-2",
+        "step_label": "02 / Check",
+        "icon": "trending-down",
+        "title": "出席頻率下滑<br>或異常變化？",
+        "subtitle": "出席預警",
+        "type": "decision"
+      },
+      {
+        "id": "3-3",
+        "step_label": "03 / Query",
+        "icon": "help-circle",
+        "title": "是否有小組？",
+        "subtitle": "系統身分檢查",
+        "type": "decision"
+      },
+      {
+        "id": "3-4",
+        "step_label": "04A / Contact",
+        "icon": "message-square",
+        "title": "牧養組主動詢問小組長",
+        "subtitle": "評估是否需協助",
+        "type": "normal",
+        "connects_from": "3-3",
+        "label": "有小組"
+      },
+      {
+        "id": "3-5",
+        "step_label": "05A / Meeting",
+        "icon": "users",
+        "title": "定期個案研討：<br>小組長與區長/牧者會面",
+        "subtitle": "個案研討",
+        "type": "normal"
+      },
+      {
+        "id": "3-6",
+        "step_label": "06A / Strategy",
+        "icon": "clipboard-list",
+        "title": "擬定具體關懷與<br>協調方案",
+        "subtitle": "行動方案落實",
+        "type": "normal"
+      }
+    ],
+    "loop_back": {
+      "from": "3-2",
+      "to": "3-1",
+      "label": "否"
+    }
+  }
+}
