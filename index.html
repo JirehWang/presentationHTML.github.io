@@ -361,8 +361,8 @@
             <i data-lucide="compass" class="w-5.5 h-5.5 text-amber-700"></i>
           </div>
           <div class="min-w-0 flex-1">
-            <h1 id="header-title" class="text-sm sm:text-base font-bold tracking-tight text-stone-850 truncate"><!--EDIT:header-title-->宏觀總覽：生生不息的牧養全景圖<!--/EDIT:header-title--></h1>
-            <p id="header-subtitle" class="text-[9px] sm:text-[10px] text-stone-500 mt-0.5 truncate"><!--EDIT:系統化關懷與常態牧養流程設計-溫暖畫布互動版-->系統化關懷與常態牧養流程設計（溫暖畫布互動版）<!--/EDIT:系統化關懷與常態牧養流程設計-溫暖畫布互動版--></p>
+            <h1 id="header-title" class="text-sm sm:text-base font-bold tracking-tight text-stone-850 truncate"><span data-edit-key="header-title">宏觀總覽：生生不息的牧養全景圖</span></h1>
+            <p id="header-subtitle" class="text-[9px] sm:text-[10px] text-stone-500 mt-0.5 truncate"><span data-edit-key="系統化關懷與常態牧養流程設計-溫暖畫布互動版">系統化關懷與常態牧養流程設計（溫暖畫布互動版）</span></p>
           </div>
         </div>
         
@@ -378,6 +378,13 @@
             <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> 重設視角
           </button>
         </div>
+
+        <!-- Edit Mode Button (always visible) -->
+        <button id="edit-mode-btn" onclick="toggleEditMode()"
+          class="ml-3 px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-200 border border-stone-200 bg-white hover:bg-amber-50 hover:border-amber-300 text-stone-500 hover:text-amber-700 flex items-center gap-1.5 shrink-0">
+          <i data-lucide="pencil" class="w-3.5 h-3.5"></i>
+          <span id="edit-mode-label">編輯模式</span>
+        </button>
       </header>
 
       <!-- Slides Viewport -->
@@ -392,7 +399,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <!-- Left Column: Title and Subtitle -->
               <div class="lg:col-span-5 space-y-6 text-left flex flex-col items-start">
-                <div class="inline-flex items-center gap-1.5 bg-amber-500/10 border border-amber-500/20 text-amber-800 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"><!--EDIT:s1-系統化牧養架構說明--><i data-lucide="shield" class="w-3 h-3"></i> 系統化牧養架構說明<!--/EDIT:s1-系統化牧養架構說明--></div>
+                <div class="inline-flex items-center gap-1.5 bg-amber-500/10 border border-amber-500/20 text-amber-800 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"><span data-edit-key="s1-系統化牧養架構說明"><i data-lucide="shield" class="w-3 h-3"></i> 系統化牧養架構說明</span></div>
                 
                 <div class="space-y-4 w-full">
                   <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-stone-850 leading-tight">
@@ -525,9 +532,9 @@
         <div id="slide-2" class="slide-container justify-center p-4 md:p-8 overflow-y-auto">
           <div class="max-w-5xl mx-auto w-full space-y-6 flex flex-col justify-between h-full">
             <div class="text-center space-y-1.5">
-              <span class="text-[9px] uppercase tracking-wider font-extrabold text-amber-700 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200 inline-block"><!--EDIT:s2-核心概念圖-->核心概念圖<!--/EDIT:s2-核心概念圖--></span>
-              <h2 class="text-2xl font-bold text-stone-850"><!--EDIT:s2-教會關懷與牧養生態循環系統-->教會關懷與牧養生態循環系統<!--/EDIT:s2-教會關懷與牧養生態循環系統--></h2>
-              <p class="text-xs text-stone-500 max-w-xl mx-auto"><!--EDIT:s2-生生不息的四階段防護網-以愛為核心-建立無縫接軌的常態關懷與專業輔導機制-->生生不息的四階段防護網：以愛為核心，建立無縫接軌的常態關懷與專業輔導機制。<!--/EDIT:s2-生生不息的四階段防護網-以愛為核心-建立無縫接軌的常態關懷與專業輔導機制--></p>
+              <span class="text-[9px] uppercase tracking-wider font-extrabold text-amber-700 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200 inline-block"><span data-edit-key="s2-核心概念圖">核心概念圖</span></span>
+              <h2 class="text-2xl font-bold text-stone-850"><span data-edit-key="s2-教會關懷與牧養生態循環系統">教會關懷與牧養生態循環系統</span></h2>
+              <p class="text-xs text-stone-500 max-w-xl mx-auto"><span data-edit-key="s2-生生不息的四階段防護網-以愛為核心-建立無縫接軌的常態關懷與專業輔導機制">生生不息的四階段防護網：以愛為核心，建立無縫接軌的常態關懷與專業輔導機制。</span></p>
             </div>
             
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center flex-1 py-4">
@@ -628,8 +635,8 @@
                       <i data-lucide="info" class="w-6 h-6"></i>
                     </div>
                     <div class="space-y-1">
-                      <h3 class="text-sm font-bold text-stone-850"><!--EDIT:s2-互動式概念圖說明-->互動式概念圖說明<!--/EDIT:s2-互動式概念圖說明--></h3>
-                      <p class="text-xs text-stone-500 max-w-xs leading-relaxed"><!--EDIT:s2-請將滑鼠移至左側的生命循環節點-或直接點選節點-即可顯示各個階段在牧養生態系中的-->請將滑鼠移至左側的生命循環節點，或直接點選節點，即可顯示各個階段在牧養生態系中的工作執掌、時程目標與核心價值。<!--/EDIT:s2-請將滑鼠移至左側的生命循環節點-或直接點選節點-即可顯示各個階段在牧養生態系中的--></p>
+                      <h3 class="text-sm font-bold text-stone-850"><span data-edit-key="s2-互動式概念圖說明">互動式概念圖說明</span></h3>
+                      <p class="text-xs text-stone-500 max-w-xs leading-relaxed"><span data-edit-key="s2-請將滑鼠移至左側的生命循環節點-或直接點選節點-即可顯示各個階段在牧養生態系中的">請將滑鼠移至左側的生命循環節點，或直接點選節點，即可顯示各個階段在牧養生態系中的工作執掌、時程目標與核心價值。</span></p>
                     </div>
                   </div>
                 </div>
@@ -658,10 +665,10 @@
                 <div class="flex items-center space-x-8 pt-2">
                   <div id="node-1-1" class="glass-card glow-green w-48 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 border-emerald-500/25" onclick="handleNodeClick(event, '1-1')">
                     <div class="flex justify-between items-start">
-                      <span class="text-[10px] text-emerald-700 font-semibold tracking-wider"><!--EDIT:s3-01-onboarding-->01 / Onboarding<!--/EDIT:s3-01-onboarding--></span>
+                      <span class="text-[10px] text-emerald-700 font-semibold tracking-wider"><span data-edit-key="s3-01-onboarding">01 / Onboarding</span></span>
                       <i data-lucide="log-in" class="w-3.5 h-3.5 text-emerald-700"></i>
                     </div>
-                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><!--EDIT:s3-新家人初次蒞臨-->新家人初次蒞臨<!--/EDIT:s3-新家人初次蒞臨--></div>
+                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><span data-edit-key="s3-新家人初次蒞臨">新家人初次蒞臨</span></div>
                     <div class="text-[9px] text-stone-450 mt-1">現場接待點</div>
                   </div>
         
@@ -669,10 +676,10 @@
         
                   <div id="node-1-2" class="glass-card glow-green w-48 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 border-emerald-500/25" onclick="handleNodeClick(event, '1-2')">
                     <div class="flex justify-between items-start">
-                      <span class="text-[10px] text-emerald-700 font-semibold tracking-wider"><!--EDIT:s3-02-setup-->02 / Setup<!--/EDIT:s3-02-setup--></span>
+                      <span class="text-[10px] text-emerald-700 font-semibold tracking-wider"><span data-edit-key="s3-02-setup">02 / Setup</span></span>
                       <i data-lucide="file-text" class="w-3.5 h-3.5 text-emerald-700"></i>
                     </div>
-                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><!--EDIT:s3-現場接待與協助填寫留名卡-->現場接待與<br>協助填寫留名卡<!--/EDIT:s3-現場接待與協助填寫留名卡--></div>
+                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><span data-edit-key="s3-現場接待與協助填寫留名卡">現場接待與<br>協助填寫留名卡</span></div>
                     <div class="text-[9px] text-stone-450 mt-1">新家人同工</div>
                   </div>
         
@@ -680,10 +687,10 @@
         
                   <div id="node-1-4" class="glass-card glow-green w-48 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 border-emerald-500/25" onclick="handleNodeClick(event, '1-4')">
                     <div class="flex justify-between items-start">
-                      <span class="text-[10px] text-emerald-700 font-semibold tracking-wider"><!--EDIT:s3-03-matchmaking-->03 / Matchmaking<!--/EDIT:s3-03-matchmaking--></span>
+                      <span class="text-[10px] text-emerald-700 font-semibold tracking-wider"><span data-edit-key="s3-03-matchmaking">03 / Matchmaking</span></span>
                       <i data-lucide="users" class="w-3.5 h-3.5 text-emerald-700"></i>
                     </div>
-                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><!--EDIT:s3-主日會後邀請小組代表進行媒合-->主日會後<br>邀請小組代表進行媒合<!--/EDIT:s3-主日會後邀請小組代表進行媒合--></div>
+                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><span data-edit-key="s3-主日會後邀請小組代表進行媒合">主日會後<br>邀請小組代表進行媒合</span></div>
                     <div class="text-[9px] text-stone-450 mt-1">新家人同工</div>
                   </div>
                   
@@ -691,10 +698,10 @@
         
                   <div id="node-1-3" class="glass-card glow-green w-48 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 border-emerald-500/25" onclick="handleNodeClick(event, '1-3')">
                     <div class="flex justify-between items-start">
-                      <span class="text-[10px] text-emerald-700 font-semibold tracking-wider"><!--EDIT:s3-04-tracking-->04 / Tracking<!--/EDIT:s3-04-tracking--></span>
+                      <span class="text-[10px] text-emerald-700 font-semibold tracking-wider"><span data-edit-key="s3-04-tracking">04 / Tracking</span></span>
                       <i data-lucide="calendar" class="w-3.5 h-3.5 text-emerald-700"></i>
                     </div>
-                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><!--EDIT:s3-初步追蹤-4週內-了解適應狀況-->初步追蹤 4週內：<br>了解適應狀況<!--/EDIT:s3-初步追蹤-4週內-了解適應狀況--></div>
+                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><span data-edit-key="s3-初步追蹤-4週內-了解適應狀況">初步追蹤 4週內：<br>了解適應狀況</span></div>
                     <div class="text-[9px] text-stone-450 mt-1">新家人同工</div>
                   </div>
         
@@ -702,10 +709,10 @@
         
                   <div id="node-1-5" class="glass-card glow-green w-44 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 border-emerald-500/25" onclick="handleNodeClick(event, '1-5')">
                     <div class="flex justify-between items-start">
-                      <span class="text-[10px] text-emerald-700 font-semibold tracking-wider"><!--EDIT:s3-05-evaluation-->05 / Evaluation<!--/EDIT:s3-05-evaluation--></span>
+                      <span class="text-[10px] text-emerald-700 font-semibold tracking-wider"><span data-edit-key="s3-05-evaluation">05 / Evaluation</span></span>
                       <i data-lucide="help-circle" class="w-3.5 h-3.5 text-emerald-700"></i>
                     </div>
-                    <div class="font-bold text-sm text-stone-850 mt-2 text-center"><!--EDIT:s3-4週內結案評估-->4週內結案評估<!--/EDIT:s3-4週內結案評估--></div>
+                    <div class="font-bold text-sm text-stone-850 mt-2 text-center"><span data-edit-key="s3-4週內結案評估">4週內結案評估</span></div>
                     <div class="text-[9px] text-stone-450 text-right mt-1">決策機制</div>
                   </div>
         
@@ -744,10 +751,10 @@
                 <div class="flex items-center space-x-8 pt-2">
                   <div id="node-2-1" class="glass-card glow-blue w-48 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 border-blue-500/25" onclick="handleNodeClick(event, '2-1')">
                     <div class="flex justify-between items-start">
-                      <span class="text-[10px] text-blue-700 font-semibold tracking-wider"><!--EDIT:s3-01-system-->01 / System<!--/EDIT:s3-01-system--></span>
+                      <span class="text-[10px] text-blue-700 font-semibold tracking-wider"><span data-edit-key="s3-01-system">01 / System</span></span>
                       <i data-lucide="database" class="w-3.5 h-3.5 text-blue-700"></i>
                     </div>
-                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><!--EDIT:s3-主日點名系統-->主日點名系統<!--/EDIT:s3-主日點名系統--></div>
+                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><span data-edit-key="s3-主日點名系統">主日點名系統</span></div>
                     <div class="text-[9px] text-stone-450 mt-1">每週數據回報</div>
                   </div>
         
@@ -755,10 +762,10 @@
         
                   <div id="node-2-2" class="glass-card glow-blue w-48 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 border-blue-500/25" onclick="handleNodeClick(event, '2-2')">
                     <div class="flex justify-between items-start">
-                      <span class="text-[10px] text-blue-700 font-semibold tracking-wider"><!--EDIT:s3-02-analysis-->02 / Analysis<!--/EDIT:s3-02-analysis--></span>
+                      <span class="text-[10px] text-blue-700 font-semibold tracking-wider"><span data-edit-key="s3-02-analysis">02 / Analysis</span></span>
                       <i data-lucide="bar-chart-2" class="w-3.5 h-3.5 text-blue-700"></i>
                     </div>
-                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><!--EDIT:s3-1個月內出席狀況-->1個月內出席狀況<!--/EDIT:s3-1個月內出席狀況--></div>
+                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><span data-edit-key="s3-1個月內出席狀況">1個月內出席狀況</span></div>
                     <div class="text-[9px] text-stone-450 mt-1">系統判定分流</div>
                   </div>
         
@@ -790,10 +797,10 @@
         
                   <div id="node-2-5" class="glass-card glow-blue w-52 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 border-blue-500/25" onclick="handleNodeClick(event, '2-5')">
                     <div class="flex justify-between items-start">
-                      <span class="text-[10px] text-blue-700 font-semibold tracking-wider"><!--EDIT:s3-03-follow-up-->03 / Follow-up<!--/EDIT:s3-03-follow-up--></span>
+                      <span class="text-[10px] text-blue-700 font-semibold tracking-wider"><span data-edit-key="s3-03-follow-up">03 / Follow-up</span></span>
                       <i data-lucide="clock" class="w-3.5 h-3.5 text-blue-700"></i>
                     </div>
-                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><!--EDIT:s3-後期追蹤-1-2個月-觀察小組長是否新增名單-->後期追蹤 1-2個月：<br>觀察小組長是否新增名單<!--/EDIT:s3-後期追蹤-1-2個月-觀察小組長是否新增名單--></div>
+                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><span data-edit-key="s3-後期追蹤-1-2個月-觀察小組長是否新增名單">後期追蹤 1-2個月：<br>觀察小組長是否新增名單</span></div>
                     <div class="text-[9px] text-stone-450 mt-1">小組長定期回報</div>
                   </div>
         
@@ -801,10 +808,10 @@
         
                   <div id="node-2-6" class="glass-card glow-blue w-48 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 border-blue-500/25" onclick="handleNodeClick(event, '2-6')">
                     <div class="flex justify-between items-start">
-                      <span class="text-[10px] text-blue-700 font-semibold tracking-wider"><!--EDIT:s3-04-check-->04 / Check<!--/EDIT:s3-04-check--></span>
+                      <span class="text-[10px] text-blue-700 font-semibold tracking-wider"><span data-edit-key="s3-04-check">04 / Check</span></span>
                       <i data-lucide="check-square" class="w-3.5 h-3.5 text-blue-700"></i>
                     </div>
-                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><!--EDIT:s3-是否於小組實際出現-->是否於小組<br>實際出現？<!--/EDIT:s3-是否於小組實際出現--></div>
+                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><span data-edit-key="s3-是否於小組實際出現">是否於小組<br>實際出現？</span></div>
                     <div class="text-[9px] text-stone-450 mt-1">最終確認</div>
                   </div>
         
@@ -838,7 +845,7 @@
               <div class="w-full flex justify-end pr-36 -my-10 z-30">
                 <div id="node-3-7" class="glass-card glow-orange w-56 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-24 border-amber-500/25" onclick="handleNodeClick(event, '3-7')">
                   <div class="flex justify-between items-start">
-                    <span class="text-[10px] text-orange-700 font-semibold tracking-wider"><!--EDIT:s3-04b-care-group-takeover-->04B / Care Group Takeover<!--/EDIT:s3-04b-care-group-takeover--></span>
+                    <span class="text-[10px] text-orange-700 font-semibold tracking-wider"><span data-edit-key="s3-04b-care-group-takeover">04B / Care Group Takeover</span></span>
                     <i data-lucide="heart-handshake" class="w-3.5 h-3.5 text-orange-700"></i>
                   </div>
                   <div class="font-bold text-xs text-stone-850 mt-1">關懷組接手</div>
@@ -855,10 +862,10 @@
                 <div class="flex items-center space-x-8 pt-2">
                   <div id="node-3-1" class="glass-card glow-orange w-52 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 border-amber-500/25" onclick="handleNodeClick(event, '3-1')">
                     <div class="flex justify-between items-start">
-                      <span class="text-[10px] text-amber-700 font-semibold tracking-wider"><!--EDIT:s3-01-observation-->01 / Observation<!--/EDIT:s3-01-observation--></span>
+                      <span class="text-[10px] text-amber-700 font-semibold tracking-wider"><span data-edit-key="s3-01-observation">01 / Observation</span></span>
                       <i data-lucide="eye" class="w-3.5 h-3.5 text-amber-700"></i>
                     </div>
-                    <div class="font-bold text-xs text-stone-800 mt-2 leading-relaxed"><!--EDIT:s3-牧養組-每週數據觀察-觀察禮拜-主日學出席-->牧養組：每週數據觀察：<br>觀察禮拜/主日學出席<!--/EDIT:s3-牧養組-每週數據觀察-觀察禮拜-主日學出席--></div>
+                    <div class="font-bold text-xs text-stone-800 mt-2 leading-relaxed"><span data-edit-key="s3-牧養組-每週數據觀察-觀察禮拜-主日學出席">牧養組：每週數據觀察：<br>觀察禮拜/主日學出席</span></div>
                     <div class="text-[9px] text-stone-450 mt-1">常態數據比對</div>
                   </div>
         
@@ -866,10 +873,10 @@
         
                   <div id="node-3-2" class="glass-card glow-orange w-44 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 border-amber-500/25" onclick="handleNodeClick(event, '3-2')">
                     <div class="flex justify-between items-start">
-                      <span class="text-[10px] text-amber-700 font-semibold tracking-wider"><!--EDIT:s3-02-check-->02 / Check<!--/EDIT:s3-02-check--></span>
+                      <span class="text-[10px] text-amber-700 font-semibold tracking-wider"><span data-edit-key="s3-02-check">02 / Check</span></span>
                       <i data-lucide="trending-down" class="w-3.5 h-3.5 text-amber-700"></i>
                     </div>
-                    <div class="font-bold text-sm text-stone-850 mt-2 text-center"><!--EDIT:s3-出席頻率下滑或異常變化-->出席頻率下滑<br>或異常變化？<!--/EDIT:s3-出席頻率下滑或異常變化--></div>
+                    <div class="font-bold text-sm text-stone-850 mt-2 text-center"><span data-edit-key="s3-出席頻率下滑或異常變化">出席頻率下滑<br>或異常變化？</span></div>
                     <div class="text-[9px] text-stone-450 text-right mt-1">出席預警</div>
                   </div>
         
@@ -877,10 +884,10 @@
         
                   <div id="node-3-3" class="glass-card glow-orange w-44 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 border-amber-500/25" onclick="handleNodeClick(event, '3-3')">
                     <div class="flex justify-between items-start">
-                      <span class="text-[10px] text-amber-700 font-semibold tracking-wider"><!--EDIT:s3-03-query-->03 / Query<!--/EDIT:s3-03-query--></span>
+                      <span class="text-[10px] text-amber-700 font-semibold tracking-wider"><span data-edit-key="s3-03-query">03 / Query</span></span>
                       <i data-lucide="help-circle" class="w-3.5 h-3.5 text-amber-700"></i>
                     </div>
-                    <div class="font-bold text-sm text-stone-850 mt-2 text-center"><!--EDIT:s3-是否有小組-->是否有小組？<!--/EDIT:s3-是否有小組--></div>
+                    <div class="font-bold text-sm text-stone-850 mt-2 text-center"><span data-edit-key="s3-是否有小組">是否有小組？</span></div>
                     <div class="text-[9px] text-stone-450 text-right mt-1">系統身分檢查</div>
                   </div>
         
@@ -888,10 +895,10 @@
         
                   <div id="node-3-4" class="glass-card glow-orange w-48 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 border-amber-500/25" onclick="handleNodeClick(event, '3-4')">
                     <div class="flex justify-between items-start">
-                      <span class="text-[10px] text-orange-700 font-semibold tracking-wider"><!--EDIT:s3-04a-contact-->04A / Contact<!--/EDIT:s3-04a-contact--></span>
+                      <span class="text-[10px] text-orange-700 font-semibold tracking-wider"><span data-edit-key="s3-04a-contact">04A / Contact</span></span>
                       <i data-lucide="message-square" class="w-3.5 h-3.5 text-orange-700"></i>
                     </div>
-                    <div class="font-bold text-xs text-stone-800 mt-2 leading-relaxed"><!--EDIT:s3-牧養組主動詢問小組長-->牧養組主動詢問小組長<!--/EDIT:s3-牧養組主動詢問小組長--></div>
+                    <div class="font-bold text-xs text-stone-800 mt-2 leading-relaxed"><span data-edit-key="s3-牧養組主動詢問小組長">牧養組主動詢問小組長</span></div>
                     <div class="text-[9px] text-stone-450 mt-1">評估是否需協助</div>
                   </div>
                   
@@ -899,10 +906,10 @@
         
                   <div id="node-3-5" class="glass-card glow-orange w-48 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 border-amber-500/25" onclick="handleNodeClick(event, '3-5')">
                     <div class="flex justify-between items-start">
-                      <span class="text-[10px] text-orange-700 font-semibold tracking-wider"><!--EDIT:s3-05a-meeting-->05A / Meeting<!--/EDIT:s3-05a-meeting--></span>
+                      <span class="text-[10px] text-orange-700 font-semibold tracking-wider"><span data-edit-key="s3-05a-meeting">05A / Meeting</span></span>
                       <i data-lucide="users" class="w-3.5 h-3.5 text-orange-700"></i>
                     </div>
-                    <div class="font-bold text-xs text-stone-800 mt-2 leading-relaxed"><!--EDIT:s3-定期個案研討-小組長與區長-牧者會面-->定期個案研討：<br>小組長與區長/牧者會面<!--/EDIT:s3-定期個案研討-小組長與區長-牧者會面--></div>
+                    <div class="font-bold text-xs text-stone-800 mt-2 leading-relaxed"><span data-edit-key="s3-定期個案研討-小組長與區長-牧者會面">定期個案研討：<br>小組長與區長/牧者會面</span></div>
                     <div class="text-[9px] text-stone-450 mt-1">個案研討</div>
                   </div>
         
@@ -910,10 +917,10 @@
         
                   <div id="node-3-6" class="glass-card glow-orange w-48 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 border-amber-500/25" onclick="handleNodeClick(event, '3-6')">
                     <div class="flex justify-between items-start">
-                      <span class="text-[10px] text-orange-700 font-semibold tracking-wider"><!--EDIT:s3-06a-strategy-->06A / Strategy<!--/EDIT:s3-06a-strategy--></span>
+                      <span class="text-[10px] text-orange-700 font-semibold tracking-wider"><span data-edit-key="s3-06a-strategy">06A / Strategy</span></span>
                       <i data-lucide="clipboard-list" class="w-3.5 h-3.5 text-orange-700"></i>
                     </div>
-                    <div class="font-bold text-xs text-stone-800 mt-2 leading-relaxed"><!--EDIT:s4-擬定具體關懷與協調方案-->擬定具體關懷與<br>協調方案<!--/EDIT:s4-擬定具體關懷與協調方案--></div>
+                    <div class="font-bold text-xs text-stone-800 mt-2 leading-relaxed"><span data-edit-key="s4-擬定具體關懷與協調方案">擬定具體關懷與<br>協調方案</span></div>
                     <div class="text-[9px] text-stone-450 mt-1">行動方案落實</div>
                   </div>
         
@@ -937,17 +944,17 @@
         <div id="slide-4" class="slide-container justify-center p-8 overflow-y-auto">
           <div class="max-w-5xl mx-auto w-full space-y-6">
             <div class="text-center space-y-2">
-              <span class="text-[9px] uppercase tracking-wider font-extrabold text-amber-700 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200 inline-block"><!--EDIT:s4-角色職掌與分工-->角色職掌與分工<!--/EDIT:s4-角色職掌與分工--></span>
-              <h2 class="text-2xl font-bold text-stone-850"><!--EDIT:s4-關懷色彩計劃-在哪個階段接手-->關懷色彩計劃：在哪個階段接手？<!--/EDIT:s4-關懷色彩計劃-在哪個階段接手--></h2>
-              <p class="text-xs text-stone-500 max-w-xl mx-auto"><!--EDIT:s4-藉由明確的角色分工與色彩管理-以及銜接點-確保新人在不同階段獲得最妥適的牧養支持-->藉由明確的角色分工與色彩管理，以及銜接點，確保新人在不同階段獲得最妥適的牧養支持。<!--/EDIT:s4-藉由明確的角色分工與色彩管理-以及銜接點-確保新人在不同階段獲得最妥適的牧養支持--></p>
+              <span class="text-[9px] uppercase tracking-wider font-extrabold text-amber-700 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200 inline-block"><span data-edit-key="s4-角色職掌與分工">角色職掌與分工</span></span>
+              <h2 class="text-2xl font-bold text-stone-850"><span data-edit-key="s4-關懷色彩計劃-在哪個階段接手">關懷色彩計劃：在哪個階段接手？</span></h2>
+              <p class="text-xs text-stone-500 max-w-xl mx-auto"><span data-edit-key="s4-藉由明確的角色分工與色彩管理-以及銜接點-確保新人在不同階段獲得最妥適的牧養支持">藉由明確的角色分工與色彩管理，以及銜接點，確保新人在不同階段獲得最妥適的牧養支持。</span></p>
             </div>
             
             <!-- Flow Handoff Diagram Chain -->
             <div class="hidden md:flex items-center justify-between max-w-4xl mx-auto px-16 py-4">
               <!-- Circle 1 -->
               <div class="flex flex-col items-center space-y-1 bg-white p-3 rounded-xl border border-stone-200/60 shadow-sm">
-                <div class="w-8 h-8 rounded-full bg-emerald-50 border-2 border-emerald-500 flex items-center justify-center text-xs font-bold text-emerald-700 shadow-sm shadow-emerald-500/10"><!--EDIT:s4-1-新家人關懷-->1</div>
-                <span class="text-[10px] text-emerald-800 font-bold">新家人關懷</span><!--/EDIT:s4-1-新家人關懷--></div>
+                <div class="w-8 h-8 rounded-full bg-emerald-50 border-2 border-emerald-500 flex items-center justify-center text-xs font-bold text-emerald-700 shadow-sm shadow-emerald-500/10"><span data-edit-key="s4-1-新家人關懷">1</div>
+                <span class="text-[10px] text-emerald-800 font-bold">新家人關懷</span></span></div>
               
               <!-- Flow line 1-2 -->
               <div class="flex-1 flex flex-col items-center mx-4 space-y-1">
@@ -957,8 +964,8 @@
               
               <!-- Circle 2 -->
               <div class="flex flex-col items-center space-y-1 bg-white p-3 rounded-xl border border-stone-200/60 shadow-sm">
-                <div class="w-8 h-8 rounded-full bg-blue-50 border-2 border-blue-500 flex items-center justify-center text-xs font-bold text-blue-700 shadow-sm shadow-blue-500/10"><!--EDIT:s4-2-小組常態融入-->2</div>
-                <span class="text-[10px] text-blue-800 font-bold">小組常態融入</span><!--/EDIT:s4-2-小組常態融入--></div>
+                <div class="w-8 h-8 rounded-full bg-blue-50 border-2 border-blue-500 flex items-center justify-center text-xs font-bold text-blue-700 shadow-sm shadow-blue-500/10"><span data-edit-key="s4-2-小組常態融入">2</div>
+                <span class="text-[10px] text-blue-800 font-bold">小組常態融入</span></span></div>
               
               <!-- Flow line 2-3 -->
               <div class="flex-1 flex flex-col items-center mx-4 space-y-1">
@@ -968,8 +975,8 @@
               
               <!-- Circle 3 -->
               <div class="flex flex-col items-center space-y-1 bg-white p-3 rounded-xl border border-stone-200/60 shadow-sm">
-                <div class="w-8 h-8 rounded-full bg-orange-50 border-2 border-orange-500 flex items-center justify-center text-xs font-bold text-orange-700 shadow-sm shadow-orange-500/10"><!--EDIT:s4-3-專業關懷組-->3</div>
-                <span class="text-[10px] text-orange-850 font-bold">專業關懷組</span><!--/EDIT:s4-3-專業關懷組--></div>
+                <div class="w-8 h-8 rounded-full bg-orange-50 border-2 border-orange-500 flex items-center justify-center text-xs font-bold text-orange-700 shadow-sm shadow-orange-500/10"><span data-edit-key="s4-3-專業關懷組">3</div>
+                <span class="text-[10px] text-orange-850 font-bold">專業關懷組</span></span></div>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 max-w-5xl mx-auto">
@@ -987,7 +994,7 @@
                 </div>
                 <div class="space-y-2 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 class="text-base font-bold text-emerald-950"><!--EDIT:s4-新家人同工-系統-->新家人同工 / 系統<!--/EDIT:s4-新家人同工-系統--></h3>
+                    <h3 class="text-base font-bold text-emerald-950"><span data-edit-key="s4-新家人同工-系統">新家人同工 / 系統</span></h3>
                     <span class="inline-block px-2 py-0.5 bg-emerald-100/60 text-emerald-750 rounded text-[9px] font-bold mt-1">時程：0 - 4 週</span>
                     <p class="text-xs text-emerald-900 font-medium leading-relaxed mt-2.5">
                       負責初次接待、4週內初步追蹤，以及系統建檔。
@@ -1015,7 +1022,7 @@
                 </div>
                 <div class="space-y-2 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 class="text-base font-bold text-sky-950"><!--EDIT:s4-小組長-小組-->小組長 / 小組<!--/EDIT:s4-小組長-小組--></h3>
+                    <h3 class="text-base font-bold text-sky-950"><span data-edit-key="s4-小組長-小組">小組長 / 小組</span></h3>
                     <span class="inline-block px-2 py-0.5 bg-sky-100/60 text-sky-755 rounded text-[9px] font-bold mt-1">時程：1 - 2 個月</span>
                     <p class="text-xs text-sky-900 font-medium leading-relaxed mt-2.5">
                       負責將名單加入小組、穩定澆灌與日常牧養。
@@ -1044,7 +1051,7 @@
                 </div>
                 <div class="space-y-2 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 class="text-base font-bold text-orange-950"><!--EDIT:s4-牧養組-關懷組-->牧養組 / 關懷組<!--/EDIT:s4-牧養組-關懷組--></h3>
+                    <h3 class="text-base font-bold text-orange-950"><span data-edit-key="s4-牧養組-關懷組">牧養組 / 關懷組</span></h3>
                     <span class="inline-block px-2 py-0.5 bg-orange-100/60 text-orange-755 rounded text-[9px] font-bold mt-1">時程：常態 / 滿 3 個月</span>
                     <p class="text-xs text-orange-900 font-medium leading-relaxed mt-2.5">
                       負責每週數據監控、異常預警與深度關懷介入。
@@ -1064,18 +1071,18 @@
         <div id="slide-5" class="slide-container justify-center p-8 overflow-y-auto">
           <div class="max-w-4xl mx-auto w-full space-y-8">
             <div class="text-center space-y-2">
-              <span class="text-[10px] bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1 rounded-full font-bold uppercase tracking-wider"><!--EDIT:s5-區塊一細節-->區塊一細節<!--/EDIT:s5-區塊一細節--></span>
-              <h2 class="text-2xl font-bold text-stone-850 mt-2"><!--EDIT:s5-新家人接待與初步追蹤-->新家人接待與初步追蹤<!--/EDIT:s5-新家人接待與初步追蹤--></h2>
-              <p class="text-xs text-stone-500"><!--EDIT:s5-從初次蒞臨到小組實體媒合-在黃金四週內建立初步信任與適應評估-->從初次蒞臨到小組實體媒合，在黃金四週內建立初步信任與適應評估。<!--/EDIT:s5-從初次蒞臨到小組實體媒合-在黃金四週內建立初步信任與適應評估--></p>
+              <span class="text-[10px] bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1 rounded-full font-bold uppercase tracking-wider"><span data-edit-key="s5-區塊一細節">區塊一細節</span></span>
+              <h2 class="text-2xl font-bold text-stone-850 mt-2"><span data-edit-key="s5-新家人接待與初步追蹤">新家人接待與初步追蹤</span></h2>
+              <p class="text-xs text-stone-500"><span data-edit-key="s5-從初次蒞臨到小組實體媒合-在黃金四週內建立初步信任與適應評估">從初次蒞臨到小組實體媒合，在黃金四週內建立初步信任與適應評估。</span></p>
             </div>
             
             <!-- Horizontal Timeline Visual -->
             <div class="relative py-4 flex flex-col md:flex-row justify-between items-stretch gap-6">
               <!-- Timeline Step 1 -->
               <div class="theme-green p-6 rounded-2xl flex flex-col items-center text-center space-y-3 flex-1 transition hover:scale-[1.02] duration-200">
-                <div class="w-12 h-12 bg-white border-2 border-emerald-500 rounded-full flex items-center justify-center font-bold text-sm text-emerald-700 shadow-md shadow-emerald-500/10 shrink-0"><!--EDIT:s5-day-0-->Day 0<!--/EDIT:s5-day-0--></div>
+                <div class="w-12 h-12 bg-white border-2 border-emerald-500 rounded-full flex items-center justify-center font-bold text-sm text-emerald-700 shadow-md shadow-emerald-500/10 shrink-0"><span data-edit-key="s5-day-0">Day 0</span></div>
                 <div class="space-y-1.5">
-                  <h3 class="text-base font-bold text-emerald-950"><!--EDIT:s5-蒞臨與建檔-->蒞臨與建檔<!--/EDIT:s5-蒞臨與建檔--></h3>
+                  <h3 class="text-base font-bold text-emerald-950"><span data-edit-key="s5-蒞臨與建檔">蒞臨與建檔</span></h3>
                   <p class="text-[10px] text-emerald-800 font-bold bg-emerald-100/50 border border-emerald-200 px-2 py-0.5 rounded inline-block">新家人初次蒞臨 ➔ 現場接待建檔</p>
                   <p class="text-xs text-emerald-900/90 leading-relaxed font-medium">
                     新家人到場後由接待同工親切迎接，帶領入座；接待處邀請填寫留名表，並於當天由行政人員登錄系統。
@@ -1085,9 +1092,9 @@
               
               <!-- Timeline Step 2 -->
               <div class="theme-green p-6 rounded-2xl flex flex-col items-center text-center space-y-3 flex-1 transition hover:scale-[1.02] duration-200">
-                <div class="w-12 h-12 bg-white border-2 border-emerald-500 rounded-full flex items-center justify-center font-bold text-sm text-emerald-700 shadow-md shadow-emerald-500/10 shrink-0"><!--EDIT:s5-w-1-3-->W 1-3<!--/EDIT:s5-w-1-3--></div>
+                <div class="w-12 h-12 bg-white border-2 border-emerald-500 rounded-full flex items-center justify-center font-bold text-sm text-emerald-700 shadow-md shadow-emerald-500/10 shrink-0"><span data-edit-key="s5-w-1-3">W 1-3</span></div>
                 <div class="space-y-1.5">
-                  <h3 class="text-base font-bold text-emerald-950"><!--EDIT:s5-適應狀況評估-->適應狀況評估<!--/EDIT:s5-適應狀況評估--></h3>
+                  <h3 class="text-base font-bold text-emerald-950"><span data-edit-key="s5-適應狀況評估">適應狀況評估</span></h3>
                   <p class="text-[10px] text-emerald-800 font-bold bg-emerald-100/50 border border-emerald-200 px-2 py-0.5 rounded inline-block">初步追蹤 ➔ 評估小組</p>
                   <p class="text-xs text-emerald-900/90 leading-relaxed font-medium">
                     建檔後4週內，由關懷同工進行電話、簡訊或探訪，了解適應狀況，並依年齡、時間、工作與個性媒合適當小組。
@@ -1097,9 +1104,9 @@
               
               <!-- Timeline Step 3 -->
               <div class="theme-green p-6 rounded-2xl flex flex-col items-center text-center space-y-3 flex-1 transition hover:scale-[1.02] duration-200">
-                <div class="w-12 h-12 bg-white border-2 border-emerald-500 rounded-full flex items-center justify-center font-bold text-sm text-emerald-700 shadow-md shadow-emerald-500/10 shrink-0"><!--EDIT:s6-week-0-4-->Week 0-4<!--/EDIT:s6-week-0-4--></div>
+                <div class="w-12 h-12 bg-white border-2 border-emerald-500 rounded-full flex items-center justify-center font-bold text-sm text-emerald-700 shadow-md shadow-emerald-500/10 shrink-0"><span data-edit-key="s6-week-0-4">Week 0-4</span></div>
                 <div class="space-y-1.5">
-                  <h3 class="text-base font-bold text-emerald-950"><!--EDIT:s5-實體媒合-->實體媒合<!--/EDIT:s5-實體媒合--></h3>
+                  <h3 class="text-base font-bold text-emerald-950"><span data-edit-key="s5-實體媒合">實體媒合</span></h3>
                   <p class="text-[10px] text-emerald-800 font-bold bg-emerald-100/50 border border-emerald-200 px-2 py-0.5 rounded inline-block">主日會後 ➔ 實體媒合小組長</p>
                   <p class="text-xs text-emerald-900/90 leading-relaxed font-medium">
                     利用主日會後空檔，由新家人同工協助新朋友與經評估合適的小組代表面對面交談，建立小組關懷起點。
@@ -1120,9 +1127,9 @@
         <div id="slide-6" class="slide-container justify-center p-8 overflow-y-auto">
           <div class="max-w-4xl mx-auto w-full space-y-8">
             <div class="text-center space-y-2">
-              <span class="text-[10px] bg-amber-50 border border-amber-200 text-amber-700 px-3 py-1 rounded-full font-bold uppercase tracking-wider"><!--EDIT:s6-區塊一決策分流-->區塊一決策分流<!--/EDIT:s6-區塊一決策分流--></span>
-              <h2 class="text-2xl font-bold text-stone-850 mt-2"><!--EDIT:s6-4週結案評估分流-->4週結案評估分流<!--/EDIT:s6-4週結案評估分流--></h2>
-              <p class="text-xs text-stone-500"><!--EDIT:s6-追蹤滿4週後進行分流判定-確保能即時將新人分派到小組-或針對不再出席者辦理請安結-->追蹤滿4週後進行分流判定，確保能即時將新人分派到小組，或針對不再出席者辦理請安結案。<!--/EDIT:s6-追蹤滿4週後進行分流判定-確保能即時將新人分派到小組-或針對不再出席者辦理請安結--></p>
+              <span class="text-[10px] bg-amber-50 border border-amber-200 text-amber-700 px-3 py-1 rounded-full font-bold uppercase tracking-wider"><span data-edit-key="s6-區塊一決策分流">區塊一決策分流</span></span>
+              <h2 class="text-2xl font-bold text-stone-850 mt-2"><span data-edit-key="s6-4週結案評估分流">4週結案評估分流</span></h2>
+              <p class="text-xs text-stone-500"><span data-edit-key="s6-追蹤滿4週後進行分流判定-確保能即時將新人分派到小組-或針對不再出席者辦理請安結">追蹤滿4週後進行分流判定，確保能即時將新人分派到小組，或針對不再出席者辦理請安結案。</span></p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
@@ -1132,7 +1139,7 @@
                   <div class="p-2 bg-emerald-50 rounded-lg">
                     <i data-lucide="check-circle" class="w-5 h-5"></i>
                   </div>
-                  <h3 class="text-base font-bold text-stone-850"><!--EDIT:s6-路徑-a-開始落戶程序-->路徑 A：開始落戶程序<!--/EDIT:s6-路徑-a-開始落戶程序--></h3>
+                  <h3 class="text-base font-bold text-stone-850"><span data-edit-key="s6-路徑-a-開始落戶程序">路徑 A：開始落戶程序</span></h3>
                 </div>
                 <div class="space-y-2 text-xs text-stone-600 leading-relaxed">
                   <p class="font-semibold text-emerald-800 bg-emerald-50/50 p-2 rounded">判定條件：新家人適應良好，並與小組媒合成功。</p>
@@ -1149,7 +1156,7 @@
                   <div class="p-2 bg-stone-100 rounded-lg">
                     <i data-lucide="archive" class="w-5 h-5"></i>
                   </div>
-                  <h3 class="text-base font-bold text-stone-850"><!--EDIT:s6-路徑-b-請安拜訪結案-->路徑 B：請安拜訪結案<!--/EDIT:s6-路徑-b-請安拜訪結案--></h3>
+                  <h3 class="text-base font-bold text-stone-850"><span data-edit-key="s6-路徑-b-請安拜訪結案">路徑 B：請安拜訪結案</span></h3>
                 </div>
                 <div class="space-y-2 text-xs text-stone-600 leading-relaxed">
                   <p class="font-semibold text-stone-700 bg-stone-100 p-2 rounded">判定條件：1個月內未再出現，或明確得知改去其他地方教會。</p>
@@ -1167,39 +1174,39 @@
         <div id="slide-7" class="slide-container justify-center p-8 overflow-y-auto">
           <div class="max-w-4xl mx-auto w-full space-y-8">
             <div class="text-center space-y-2">
-              <span class="text-[10px] bg-blue-50 border border-blue-200 text-blue-700 px-3 py-1 rounded-full font-bold uppercase tracking-wider"><!--EDIT:s7-區塊二決策分流-->區塊二決策分流<!--/EDIT:s7-區塊二決策分流--></span>
-              <h2 class="text-2xl font-bold text-stone-850 mt-2"><!--EDIT:s7-系統建檔與觸發條件矩陣-->系統建檔與觸發條件矩陣<!--/EDIT:s7-系統建檔與觸發條件矩陣--></h2>
-              <p class="text-xs text-stone-500"><!--EDIT:s7-藉由系統自動化判定出席規律性-將新成員進行分流判定-提升管理精準度-->藉由系統自動化判定出席規律性，將新成員進行分流判定，提升管理精準度。<!--/EDIT:s7-藉由系統自動化判定出席規律性-將新成員進行分流判定-提升管理精準度--></p>
+              <span class="text-[10px] bg-blue-50 border border-blue-200 text-blue-700 px-3 py-1 rounded-full font-bold uppercase tracking-wider"><span data-edit-key="s7-區塊二決策分流">區塊二決策分流</span></span>
+              <h2 class="text-2xl font-bold text-stone-850 mt-2"><span data-edit-key="s7-系統建檔與觸發條件矩陣">系統建檔與觸發條件矩陣</span></h2>
+              <p class="text-xs text-stone-500"><span data-edit-key="s7-藉由系統自動化判定出席規律性-將新成員進行分流判定-提升管理精準度">藉由系統自動化判定出席規律性，將新成員進行分流判定，提升管理精準度。</span></p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
               <!-- Matrix Row 1: Standard Case -->
               <div class="theme-blue p-6 rounded-2xl transition space-y-4">
                 <div class="flex justify-between items-center">
-                  <h3 class="text-base font-bold text-stone-850 flex items-center gap-2"><!--EDIT:s7-標準件-1個月內第二次出席--><span class="px-2 py-0.5 bg-blue-50 text-blue-700 rounded text-[10px] font-bold">標準件</span>
-                    1個月內第二次出席<!--/EDIT:s7-標準件-1個月內第二次出席--></h3>
+                  <h3 class="text-base font-bold text-stone-850 flex items-center gap-2"><span data-edit-key="s7-標準件-1個月內第二次出席"><span class="px-2 py-0.5 bg-blue-50 text-blue-700 rounded text-[10px] font-bold">標準件</span>
+                    1個月內第二次出席</span></h3>
                   <i data-lucide="user-check" class="w-5 h-5 text-blue-700"></i>
                 </div>
                 <div class="space-y-2 text-xs text-stone-600 leading-relaxed">
                   <p class="font-medium text-stone-800">
                     <strong>系統處置</strong>：立即加入系統名單。
                   </p>
-                  <p class="text-stone-500"><!--EDIT:s7-判定為標準關懷對象-名單正式匯入到常態小組追蹤及點名監控系統中-準備進入後期追蹤-->判定為標準關懷對象，名單正式匯入到常態小組追蹤及點名監控系統中，準備進入後期追蹤階段。<!--/EDIT:s7-判定為標準關懷對象-名單正式匯入到常態小組追蹤及點名監控系統中-準備進入後期追蹤--></p>
+                  <p class="text-stone-500"><span data-edit-key="s7-判定為標準關懷對象-名單正式匯入到常態小組追蹤及點名監控系統中-準備進入後期追蹤">判定為標準關懷對象，名單正式匯入到常態小組追蹤及點名監控系統中，準備進入後期追蹤階段。</span></p>
                 </div>
               </div>
               
               <!-- Matrix Row 2: Observation Case -->
               <div class="theme-orange p-6 rounded-2xl transition space-y-4">
                 <div class="flex justify-between items-center">
-                  <h3 class="text-base font-bold text-stone-850 flex items-center gap-2"><!--EDIT:s7-觀察件-出席間隔超過-1-個月--><span class="px-2 py-0.5 bg-stone-100 text-stone-600 rounded text-[10px] font-bold">觀察件</span>
-                    出席間隔超過 1 個月<!--/EDIT:s7-觀察件-出席間隔超過-1-個月--></h3>
+                  <h3 class="text-base font-bold text-stone-850 flex items-center gap-2"><span data-edit-key="s7-觀察件-出席間隔超過-1-個月"><span class="px-2 py-0.5 bg-stone-100 text-stone-600 rounded text-[10px] font-bold">觀察件</span>
+                    出席間隔超過 1 個月</span></h3>
                   <i data-lucide="eye-off" class="w-5 h-5 text-stone-500"></i>
                 </div>
                 <div class="space-y-2 text-xs text-stone-600 leading-relaxed">
                   <p class="font-medium text-stone-800">
                     <strong>系統處置</strong>：暫不加入點名單，持續觀察。
                   </p>
-                  <p class="text-stone-500"><!--EDIT:s8-因出席不穩定-暫時不列入主日點名系統名單內-持續觀察-->因出席不穩定，暫時不列入主日點名系統名單內，持續觀察。<!--/EDIT:s8-因出席不穩定-暫時不列入主日點名系統名單內-持續觀察--></p>
+                  <p class="text-stone-500"><span data-edit-key="s8-因出席不穩定-暫時不列入主日點名系統名單內-持續觀察">因出席不穩定，暫時不列入主日點名系統名單內，持續觀察。</span></p>
                 </div>
               </div>
             </div>
@@ -1216,15 +1223,15 @@
         <div id="slide-8" class="slide-container justify-center p-8 overflow-y-auto">
           <div class="max-w-4xl mx-auto w-full space-y-8">
             <div class="text-center space-y-2">
-              <span class="text-[10px] bg-blue-50 border border-blue-200 text-blue-700 px-3 py-1 rounded-full font-bold uppercase tracking-wider"><!--EDIT:s8-區塊二細節-->區塊二細節<!--/EDIT:s8-區塊二細節--></span>
-              <h2 class="text-2xl font-bold text-stone-850 mt-2"><!--EDIT:s8-過渡期觀察與落戶確認-->過渡期觀察與落戶確認<!--/EDIT:s8-過渡期觀察與落戶確認--></h2>
-              <p class="text-xs text-stone-500"><!--EDIT:s8-在轉介後的-1-2-個月過渡期內-小組長與新家人同工同步關心-落實實體聚會確認與-->在轉介後的 1-2 個月過渡期內，小組長與新家人同工同步關心，落實實體聚會確認與落戶存檔。<!--/EDIT:s8-在轉介後的-1-2-個月過渡期內-小組長與新家人同工同步關心-落實實體聚會確認與--></p>
+              <span class="text-[10px] bg-blue-50 border border-blue-200 text-blue-700 px-3 py-1 rounded-full font-bold uppercase tracking-wider"><span data-edit-key="s8-區塊二細節">區塊二細節</span></span>
+              <h2 class="text-2xl font-bold text-stone-850 mt-2"><span data-edit-key="s8-過渡期觀察與落戶確認">過渡期觀察與落戶確認</span></h2>
+              <p class="text-xs text-stone-500"><span data-edit-key="s8-在轉介後的-1-2-個月過渡期內-小組長與新家人同工同步關心-落實實體聚會確認與">在轉介後的 1-2 個月過渡期內，小組長與新家人同工同步關心，落實實體聚會確認與落戶存檔。</span></p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
               <!-- Role: Group Leader -->
               <div class="theme-blue p-6 rounded-2xl space-y-4">
-                <h3 class="text-sm font-bold text-stone-850 flex items-center gap-2"><!--EDIT:s8-小組長-小組執行路徑--><i data-lucide="users" class="w-4 h-4 text-blue-700"></i> 小組長 / 小組執行路徑<!--/EDIT:s8-小組長-小組執行路徑--></h3>
+                <h3 class="text-sm font-bold text-stone-850 flex items-center gap-2"><span data-edit-key="s8-小組長-小組執行路徑"><i data-lucide="users" class="w-4 h-4 text-blue-700"></i> 小組長 / 小組執行路徑</span></h3>
                 <div class="relative pl-6 space-y-4 border-l border-stone-200">
                   <div class="relative">
                     <span class="absolute -left-[30px] top-1 w-4 h-4 rounded-full bg-blue-100 border border-blue-400 flex items-center justify-center text-[8px] font-bold text-blue-700">1</span>
@@ -1249,7 +1256,7 @@
               <!-- Role: Nurturing Worker -->
               <div class="theme-green p-6 rounded-2xl flex flex-col justify-between bg-white/70">
                 <div class="space-y-4">
-                  <h3 class="text-sm font-bold text-stone-850 flex items-center gap-2"><!--EDIT:s8-新家人同工協同機制-1-2個月--><i data-lucide="user-check" class="w-4 h-4 text-emerald-700"></i> 新家人同工協同機制 (1-2個月)<!--/EDIT:s8-新家人同工協同機制-1-2個月--></h3>
+                  <h3 class="text-sm font-bold text-stone-850 flex items-center gap-2"><span data-edit-key="s8-新家人同工協同機制-1-2個月"><i data-lucide="user-check" class="w-4 h-4 text-emerald-700"></i> 新家人同工協同機制 (1-2個月)</span></h3>
                   <div class="space-y-3 text-xs text-stone-600 leading-relaxed">
                     <p>
                       <strong>維持不定期關懷</strong>：在新家人被轉介至小組的初期，新家人同工並未完全退出，而是維持低頻率的不定期聯絡（如月度問候），以確保轉介平穩。
@@ -1271,9 +1278,9 @@
         <div id="slide-9" class="slide-container justify-center p-8 overflow-y-auto">
           <div class="max-w-4xl mx-auto w-full space-y-8">
             <div class="text-center space-y-2">
-              <span class="text-[10px] bg-orange-50 border border-orange-200 text-orange-700 px-3 py-1 rounded-full font-bold uppercase tracking-wider"><!--EDIT:s9-異常提報機制-->異常提報機制<!--/EDIT:s9-異常提報機制--></span>
-              <h2 class="text-2xl font-bold text-stone-850 mt-2"><!--EDIT:s9-異常提報-遲未落戶的防護網-->異常提報：遲未落戶的防護網<!--/EDIT:s9-異常提報-遲未落戶的防護網--></h2>
-              <p class="text-xs text-stone-500"><!--EDIT:s9-針對轉介後遲遲無法融入小組-或是出席率持續低迷的新朋友-啟動滿3個月關懷轉介機制-->針對轉介後遲遲無法融入小組、或是出席率持續低迷的新朋友，啟動滿3個月關懷轉介機制。<!--/EDIT:s9-針對轉介後遲遲無法融入小組-或是出席率持續低迷的新朋友-啟動滿3個月關懷轉介機制--></p>
+              <span class="text-[10px] bg-orange-50 border border-orange-200 text-orange-700 px-3 py-1 rounded-full font-bold uppercase tracking-wider"><span data-edit-key="s9-異常提報機制">異常提報機制</span></span>
+              <h2 class="text-2xl font-bold text-stone-850 mt-2"><span data-edit-key="s9-異常提報-遲未落戶的防護網">異常提報：遲未落戶的防護網</span></h2>
+              <p class="text-xs text-stone-500"><span data-edit-key="s9-針對轉介後遲遲無法融入小組-或是出席率持續低迷的新朋友-啟動滿3個月關懷轉介機制">針對轉介後遲遲無法融入小組、或是出席率持續低迷的新朋友，啟動滿3個月關懷轉介機制。</span></p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
@@ -1281,7 +1288,7 @@
               <div class="theme-orange p-6 rounded-2xl flex flex-col items-center text-center space-y-3 transition hover:scale-[1.02] duration-200">
                 <div class="w-10 h-10 bg-white border-2 border-orange-500 rounded-full flex items-center justify-center font-bold text-sm text-orange-700 shadow-md shrink-0">1</div>
                 <div class="space-y-1">
-                  <h3 class="text-base font-bold text-orange-950"><!--EDIT:s9-同工持續追蹤-->同工持續追蹤<!--/EDIT:s9-同工持續追蹤--></h3>
+                  <h3 class="text-base font-bold text-orange-950"><span data-edit-key="s9-同工持續追蹤">同工持續追蹤</span></h3>
                   <p class="text-xs text-orange-900 leading-relaxed font-medium">
                     名單分派至小組後，新家人同工保持被動觀察，並依規範持續追蹤關懷至滿 3 個月。
                   </p>
@@ -1291,7 +1298,7 @@
               <div class="theme-orange p-6 rounded-2xl flex flex-col items-center text-center space-y-3 transition hover:scale-[1.02] duration-200">
                 <div class="w-10 h-10 bg-white border-2 border-orange-500 rounded-full flex items-center justify-center font-bold text-sm text-orange-700 shadow-md shrink-0">2</div>
                 <div class="space-y-1">
-                  <h3 class="text-base font-bold text-orange-950"><!--EDIT:s9-觸發轉介提報-->觸發轉介提報<!--/EDIT:s9-觸發轉介提報--></h3>
+                  <h3 class="text-base font-bold text-orange-950"><span data-edit-key="s9-觸發轉介提報">觸發轉介提報</span></h3>
                   <p class="text-xs text-orange-900 leading-relaxed font-medium">
                     小組長邀約關懷滿 3 個月，新家人仍遲未出席聚會，小組長向牧養部提交「牧養轉介單」。
                   </p>
@@ -1301,7 +1308,7 @@
               <div class="theme-orange p-6 rounded-2xl flex flex-col items-center text-center space-y-3 transition hover:scale-[1.02] duration-200">
                 <div class="w-10 h-10 bg-orange-600 text-white border-2 border-orange-500 rounded-full flex items-center justify-center font-bold text-sm shadow-md shrink-0">3</div>
                 <div class="space-y-1">
-                  <h3 class="text-base font-bold text-orange-950"><!--EDIT:s10-關懷組接手-->關懷組接手<!--/EDIT:s10-關懷組接手--></h3>
+                  <h3 class="text-base font-bold text-orange-950"><span data-edit-key="s10-關懷組接手">關懷組接手</span></h3>
                   <p class="text-xs text-orange-900 leading-relaxed font-medium">
                     專業關懷同工、協談組介入個案，主動進行一對一深度探訪、電話諮商與協談輔導。
                   </p>
@@ -1315,9 +1322,9 @@
         <div id="slide-10" class="slide-container justify-center p-8 overflow-y-auto">
           <div class="max-w-5xl mx-auto w-full space-y-8">
             <div class="text-center space-y-2">
-              <span class="text-[10px] bg-orange-50 border border-orange-200 text-orange-700 px-3 py-1 rounded-full font-bold uppercase tracking-wider"><!--EDIT:s10-區塊三細節-->區塊三細節<!--/EDIT:s10-區塊三細節--></span>
-              <h2 class="text-2xl font-bold text-stone-850 mt-2"><!--EDIT:s10-全體會友常態牧養監控機制-->全體會友常態牧養監控機制<!--/EDIT:s10-全體會友常態牧養監控機制--></h2>
-              <p class="text-xs text-stone-500"><!--EDIT:s10-藉由常態監測大堂崇拜-主日學及小組出席數據-及早發掘出席率下滑之會友-防範流失於-->藉由常態監測大堂崇拜、主日學及小組出席數據，及早發掘出席率下滑之會友，防範流失於未然。<!--/EDIT:s10-藉由常態監測大堂崇拜-主日學及小組出席數據-及早發掘出席率下滑之會友-防範流失於--></p>
+              <span class="text-[10px] bg-orange-50 border border-orange-200 text-orange-700 px-3 py-1 rounded-full font-bold uppercase tracking-wider"><span data-edit-key="s10-區塊三細節">區塊三細節</span></span>
+              <h2 class="text-2xl font-bold text-stone-850 mt-2"><span data-edit-key="s10-全體會友常態牧養監控機制">全體會友常態牧養監控機制</span></h2>
+              <p class="text-xs text-stone-500"><span data-edit-key="s10-藉由常態監測大堂崇拜-主日學及小組出席數據-及早發掘出席率下滑之會友-防範流失於">藉由常態監測大堂崇拜、主日學及小組出席數據，及早發掘出席率下滑之會友，防範流失於未然。</span></p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6 pt-4 items-stretch">
@@ -1328,7 +1335,7 @@
                     <span class="text-[10px] font-bold">數據來源 A</span>
                     <i data-lucide="users" class="w-4 h-4"></i>
                   </div>
-                  <h3 class="text-sm font-bold text-stone-850 mt-3"><!--EDIT:s10-主日崇拜出席-->主日崇拜出席<!--/EDIT:s10-主日崇拜出席--></h3>
+                  <h3 class="text-sm font-bold text-stone-850 mt-3"><span data-edit-key="s10-主日崇拜出席">主日崇拜出席</span></h3>
                   <p class="text-xs text-stone-505 leading-relaxed mt-2">
                     統計每週日主日禮拜出席人數，登錄點名系統，分析常態出席趨勢。
                   </p>
@@ -1342,7 +1349,7 @@
                     <span class="text-[10px] font-bold">數據來源 B</span>
                     <i data-lucide="book-open" class="w-4 h-4"></i>
                   </div>
-                  <h3 class="text-sm font-bold text-stone-850 mt-3"><!--EDIT:s10-主日學出席-->主日學出席<!--/EDIT:s10-主日學出席--></h3>
+                  <h3 class="text-sm font-bold text-stone-850 mt-3"><span data-edit-key="s10-主日學出席">主日學出席</span></h3>
                   <p class="text-xs text-stone-505 leading-relaxed mt-2">
                     追蹤成人及兒童主日學點名表，掌握會友系統化真理學習出席。
                   </p>
@@ -1356,7 +1363,7 @@
                     <span class="text-[10px] font-bold">數據來源 C</span>
                     <i data-lucide="home" class="w-4 h-4"></i>
                   </div>
-                  <h3 class="text-sm font-bold text-stone-850 mt-3"><!--EDIT:s10-小組出席數據-->小組出席數據<!--/EDIT:s10-小組出席數據--></h3>
+                  <h3 class="text-sm font-bold text-stone-850 mt-3"><span data-edit-key="s10-小組出席數據">小組出席數據</span></h3>
                   <p class="text-xs text-stone-505 leading-relaxed mt-2">
                     透過小組點名系統，掌握每週各小組聚會實際現身之情況。
                   </p>
@@ -1366,7 +1373,7 @@
               <!-- Core Action: Monitoring -->
               <div class="theme-orange p-5 rounded-xl border-2 border-dashed border-orange-400 bg-orange-100/30 md:col-span-1 flex flex-col justify-between transition hover:scale-[1.02] duration-200">
                 <div class="space-y-2">
-                  <h3 class="text-sm font-bold text-orange-800 flex items-center gap-1.5"><!--EDIT:s10-每週出席觀察--><i data-lucide="activity" class="w-4 h-4"></i> 每週出席觀察<!--/EDIT:s10-每週出席觀察--></h3>
+                  <h3 class="text-sm font-bold text-orange-800 flex items-center gap-1.5"><span data-edit-key="s10-每週出席觀察"><i data-lucide="activity" class="w-4 h-4"></i> 每週出席觀察</span></h3>
                   <p class="text-xs text-stone-605 leading-relaxed">
                     牧養組每週比對以上點名系統數據，繪製出席趨勢圖。
                   </p>
@@ -1383,9 +1390,9 @@
         <div id="slide-11" class="slide-container justify-center p-8 overflow-y-auto">
           <div class="max-w-4xl mx-auto w-full space-y-8">
             <div class="text-center space-y-2">
-              <span class="text-[10px] bg-orange-50 border border-orange-200 text-orange-700 px-3 py-1 rounded-full font-bold uppercase tracking-wider"><!--EDIT:s11-區塊三預警分流-->區塊三預警分流<!--/EDIT:s11-區塊三預警分流--></span>
-              <h2 class="text-2xl font-bold text-stone-850 mt-2"><!--EDIT:s11-異常預警分流-有-無小組的處理路徑-->異常預警分流：有/無小組的處理路徑<!--/EDIT:s11-異常預警分流-有-無小組的處理路徑--></h2>
-              <p class="text-xs text-stone-500"><!--EDIT:s11-當系統觀察到會友出席頻率下滑時-會依其是否歸屬於小組-分流至兩條不同關懷路徑-->當系統觀察到會友出席頻率下滑時，會依其是否歸屬於小組，分流至兩條不同關懷路徑。<!--/EDIT:s11-當系統觀察到會友出席頻率下滑時-會依其是否歸屬於小組-分流至兩條不同關懷路徑--></p>
+              <span class="text-[10px] bg-orange-50 border border-orange-200 text-orange-700 px-3 py-1 rounded-full font-bold uppercase tracking-wider"><span data-edit-key="s11-區塊三預警分流">區塊三預警分流</span></span>
+              <h2 class="text-2xl font-bold text-stone-850 mt-2"><span data-edit-key="s11-異常預警分流-有-無小組的處理路徑">異常預警分流：有/無小組的處理路徑</span></h2>
+              <p class="text-xs text-stone-500"><span data-edit-key="s11-當系統觀察到會友出席頻率下滑時-會依其是否歸屬於小組-分流至兩條不同關懷路徑">當系統觀察到會友出席頻率下滑時，會依其是否歸屬於小組，分流至兩條不同關懷路徑。</span></p>
             </div>
             
             <div class="w-full max-w-4xl mx-auto flex flex-col items-center pt-2">
@@ -1413,24 +1420,24 @@
                 <div class="theme-orange p-6 rounded-2xl flex flex-col justify-between space-y-4 transition hover:scale-[1.02] duration-200 bg-white">
                   <div>
                     <span class="text-[9px] bg-emerald-50 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded font-bold">路徑 A：有特定小組</span>
-                    <h3 class="text-base font-bold text-stone-850 mt-3"><!--EDIT:s11-牧養組詢問小組長-->牧養組詢問小組長<!--/EDIT:s11-牧養組詢問小組長--></h3>
+                    <h3 class="text-base font-bold text-stone-850 mt-3"><span data-edit-key="s11-牧養組詢問小組長">牧養組詢問小組長</span></h3>
                     <p class="text-xs text-stone-605 leading-relaxed mt-2">
                       牧養組主動照會並聯繫該會友的小組長，了解會友近況（如生病、工作調動、心境變化等），並評估小組長在牧養上是否需要區部或教會資源協助。
                     </p>
                   </div>
-                  <div class="pt-3 border-t border-stone-100 text-[10px] text-amber-800 font-bold flex items-center gap-1"><!--EDIT:s12-小組內部牧養與輔導研討--><i data-lucide="users" class="w-3.5 h-3.5"></i> 小組內部牧養與輔導研討<!--/EDIT:s12-小組內部牧養與輔導研討--></div>
+                  <div class="pt-3 border-t border-stone-100 text-[10px] text-amber-800 font-bold flex items-center gap-1"><span data-edit-key="s12-小組內部牧養與輔導研討"><i data-lucide="users" class="w-3.5 h-3.5"></i> 小組內部牧養與輔導研討</span></div>
                 </div>
                 
                 <!-- Right Path: No Group -->
                 <div class="theme-pink p-6 rounded-2xl flex flex-col justify-between space-y-4 transition hover:scale-[1.02] duration-200 bg-white">
                   <div>
                     <span class="text-[9px] bg-stone-100 text-stone-600 border border-stone-200 px-2 py-0.5 rounded font-bold">路徑 B：無小組會友</span>
-                    <h3 class="text-base font-bold text-stone-850 mt-3"><!--EDIT:s11-移請關懷組介入關心-->移請關懷組介入關心<!--/EDIT:s11-移請關懷組介入關心--></h3>
+                    <h3 class="text-base font-bold text-stone-850 mt-3"><span data-edit-key="s11-移請關懷組介入關心">移請關懷組介入關心</span></h3>
                     <p class="text-xs text-stone-605 leading-relaxed mt-2">
                       若該會友未歸屬於任何特定小組，則透過直接轉介機制通知「關懷組接手」，由專業關懷同工介入進行深度探訪、心理協談或一對一諮商。
                     </p>
                   </div>
-                  <div class="pt-3 border-t border-stone-100 text-[10px] text-stone-500 font-bold flex items-center gap-1"><!--EDIT:s12-轉交關懷組專業同工接手--><i data-lucide="heart-handshake" class="w-3.5 h-3.5"></i> 轉交關懷組專業同工接手<!--/EDIT:s12-轉交關懷組專業同工接手--></div>
+                  <div class="pt-3 border-t border-stone-100 text-[10px] text-stone-500 font-bold flex items-center gap-1"><span data-edit-key="s12-轉交關懷組專業同工接手"><i data-lucide="heart-handshake" class="w-3.5 h-3.5"></i> 轉交關懷組專業同工接手</span></div>
                 </div>
               </div>
             </div>
@@ -1441,9 +1448,9 @@
         <div id="slide-12" class="slide-container justify-center p-8 overflow-y-auto">
           <div class="max-w-4xl mx-auto w-full space-y-8">
             <div class="text-center space-y-2">
-              <span class="text-[10px] bg-orange-50 border border-orange-200 text-orange-700 px-3 py-1 rounded-full font-bold uppercase tracking-wider"><!--EDIT:s12-個案研討-->個案研討<!--/EDIT:s12-個案研討--></span>
-              <h2 class="text-2xl font-bold text-stone-850 mt-2"><!--EDIT:s12-深度關懷對接-定期個案研討會-->深度關懷對接：定期個案研討會<!--/EDIT:s12-深度關懷對接-定期個案研討會--></h2>
-              <p class="text-xs text-stone-500"><!--EDIT:s12-藉由小組長-區長與牧長團隊的定期會面-共同研討困難個案-擬定具體且可行的協調關懷-->藉由小組長、區長與牧長團隊的定期會面，共同研討困難個案，擬定具體且可行的協調關懷方案。<!--/EDIT:s12-藉由小組長-區長與牧長團隊的定期會面-共同研討困難個案-擬定具體且可行的協調關懷--></p>
+              <span class="text-[10px] bg-orange-50 border border-orange-200 text-orange-700 px-3 py-1 rounded-full font-bold uppercase tracking-wider"><span data-edit-key="s12-個案研討">個案研討</span></span>
+              <h2 class="text-2xl font-bold text-stone-850 mt-2"><span data-edit-key="s12-深度關懷對接-定期個案研討會">深度關懷對接：定期個案研討會</span></h2>
+              <p class="text-xs text-stone-500"><span data-edit-key="s12-藉由小組長-區長與牧長團隊的定期會面-共同研討困難個案-擬定具體且可行的協調關懷">藉由小組長、區長與牧長團隊的定期會面，共同研討困難個案，擬定具體且可行的協調關懷方案。</span></p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4 items-center">
@@ -1498,9 +1505,9 @@
         <div id="slide-13" class="slide-container justify-center p-8 overflow-y-auto">
           <div class="max-w-5xl mx-auto w-full space-y-6">
             <div class="text-center space-y-2">
-              <span class="text-[10px] bg-amber-50 border border-amber-200 text-amber-700 px-3 py-1 rounded-full font-bold uppercase tracking-wider"><!--EDIT:s13-生態系總結-->生態系總結<!--/EDIT:s13-生態系總結--></span>
-              <h2 class="text-2xl font-bold text-stone-850"><!--EDIT:s13-系統運作總結-角色與時間對照矩陣-->系統運作總結：角色與時間對照矩陣<!--/EDIT:s13-系統運作總結-角色與時間對照矩陣--></h2>
-              <p class="text-xs text-stone-500"><!--EDIT:s13-橫向整合四大關懷角色與不同時程任務-完整落實防護網架構-->橫向整合四大關懷角色與不同時程任務，完整落實防護網架構。<!--/EDIT:s13-橫向整合四大關懷角色與不同時程任務-完整落實防護網架構--></p>
+              <span class="text-[10px] bg-amber-50 border border-amber-200 text-amber-700 px-3 py-1 rounded-full font-bold uppercase tracking-wider"><span data-edit-key="s13-生態系總結">生態系總結</span></span>
+              <h2 class="text-2xl font-bold text-stone-850"><span data-edit-key="s13-系統運作總結-角色與時間對照矩陣">系統運作總結：角色與時間對照矩陣</span></h2>
+              <p class="text-xs text-stone-500"><span data-edit-key="s13-橫向整合四大關懷角色與不同時程任務-完整落實防護網架構">橫向整合四大關懷角色與不同時程任務，完整落實防護網架構。</span></p>
             </div>
             
             <div class="bg-white border border-stone-200/80 rounded-2xl overflow-hidden shadow-md">
@@ -1615,7 +1622,7 @@
       <div class="md:col-span-1 border-r border-stone-200/60 pr-4 flex flex-col justify-between h-full">
         <div>
           <span id="bottom-badge" class="px-2 py-0.5 rounded text-[9px] font-semibold uppercase tracking-wider">區區</span>
-          <h3 id="bottom-title" class="text-base font-bold text-stone-900 mt-1 leading-snug"><!--EDIT:s13---><!--/EDIT:s13---></h3>
+          <h3 id="bottom-title" class="text-base font-bold text-stone-900 mt-1 leading-snug"><span data-edit-key="s13-"></span></h3>
           <p id="bottom-step" class="text-[10px] text-amber-800 font-medium mt-0.5"></p>
         </div>
         <button onclick="resetZoom()" class="text-stone-450 hover:text-stone-600 text-[10px] flex items-center gap-1 mt-2 text-left self-start">
@@ -1625,7 +1632,7 @@
 
       <!-- Col 2: Role Responsible -->
       <div class="md:col-span-1 border-r border-stone-200/60 pr-4 h-full">
-        <span class="text-[9px] uppercase tracking-wider font-bold text-stone-400 block"><!--EDIT:s13-負責同工-單位-->負責同工 / 單位<!--/EDIT:s13-負責同工-單位--></span>
+        <span class="text-[9px] uppercase tracking-wider font-bold text-stone-400 block"><span data-edit-key="s13-負責同工-單位">負責同工 / 單位</span></span>
         <span id="bottom-owner" class="text-xs font-bold text-stone-700 flex items-center gap-1.5 mt-2 bg-stone-100/60 px-2.5 py-1.5 rounded-lg border border-stone-200/50">
           <i data-lucide="user" class="w-3.5 h-3.5 text-amber-700"></i>
           <span></span>
@@ -1635,7 +1642,7 @@
       <!-- Col 3: Task Description / Condition -->
       <div class="md:col-span-2 flex flex-col justify-between h-full pr-1 overflow-y-auto">
         <div class="space-y-1.5">
-          <span class="text-[9px] uppercase tracking-wider font-bold text-stone-400 block"><!--EDIT:s13-執行任務與條件說明-->執行任務與條件說明<!--/EDIT:s13-執行任務與條件說明--></span>
+          <span class="text-[9px] uppercase tracking-wider font-bold text-stone-400 block"><span data-edit-key="s13-執行任務與條件說明">執行任務與條件說明</span></span>
           <p id="bottom-desc" class="text-xs text-stone-650 leading-relaxed"></p>
         </div>
       </div>
@@ -2306,10 +2313,10 @@
       card.innerHTML = `
         <div class="space-y-3 flex-1">
           <div class="flex items-center justify-between">
-            <span class="text-[9px] uppercase tracking-wider font-extrabold px-2 py-0.5 rounded border ${data.textColor} bg-white/60"><!--EDIT:s13-data-tag-->${data.tag}<!--/EDIT:s13-data-tag--></span>
+            <span class="text-[9px] uppercase tracking-wider font-extrabold px-2 py-0.5 rounded border ${data.textColor} bg-white/60"><span data-edit-key="s13-data-tag">${data.tag}</span></span>
             <i data-lucide="${data.icon}" class="w-5 h-5 ${data.textColor}"></i>
           </div>
-          <h3 class="text-base font-bold text-stone-850 mt-1"><!--EDIT:s13-data-title-->${data.title}<!--/EDIT:s13-data-title--></h3>
+          <h3 class="text-base font-bold text-stone-850 mt-1"><span data-edit-key="s13-data-title">${data.title}</span></h3>
           <p class="text-xs text-stone-600 leading-relaxed font-medium mt-2">${data.desc}</p>
           <ul class="space-y-2 mt-4 pt-3 border-t border-stone-200/50">
             ${bulletsHTML}
@@ -2723,6 +2730,208 @@
         }
       }
     });
+  </script>
+  <!-- ═══════════════════════════════════════════════════════════════════ -->
+  <!-- EDIT MODE SYSTEM                                                    -->
+  <!-- ═══════════════════════════════════════════════════════════════════ -->
+  <style>
+    /* Editable span highlight in edit mode */
+    body.edit-mode [data-edit-key] {
+      outline: 1.5px dashed #f59e0b;
+      border-radius: 3px;
+      cursor: text;
+      padding: 1px 2px;
+      transition: background 0.15s;
+      min-width: 4px;
+      display: inline-block;
+    }
+    body.edit-mode [data-edit-key]:hover {
+      background: rgba(251, 191, 36, 0.12);
+      outline-color: #d97706;
+    }
+    body.edit-mode [data-edit-key]:focus {
+      background: rgba(251, 191, 36, 0.18);
+      outline: 2px solid #d97706;
+      outline-offset: 1px;
+    }
+    /* Floating edit toolbar */
+    #edit-toolbar {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #1c1917;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 999px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+      font-size: 12px;
+      font-weight: 600;
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), opacity 0.3s ease;
+      white-space: nowrap;
+    }
+    #edit-toolbar.visible {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    #edit-toolbar .edit-count {
+      background: #f59e0b;
+      color: #1c1917;
+      border-radius: 999px;
+      padding: 1px 8px;
+      font-size: 10px;
+    }
+    #edit-toolbar button {
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 700;
+      transition: opacity 0.15s;
+    }
+    #edit-toolbar button:hover { opacity: 0.85; }
+    #btn-save-edits  { background: #f59e0b; color: #1c1917; }
+    #btn-cancel-edits { background: rgba(255,255,255,0.12); color: white; }
+  </style>
+
+  <!-- Floating Edit Toolbar -->
+  <div id="edit-toolbar">
+    <i data-lucide="pencil" style="width:14px;height:14px;opacity:0.7"></i>
+    <span>編輯模式</span>
+    <span class="edit-count" id="edit-field-count">0 欄位</span>
+    <button id="btn-save-edits" onclick="saveEdits()">💾 儲存下載</button>
+    <button id="btn-cancel-edits" onclick="cancelEditMode()">✕ 取消</button>
+  </div>
+
+  <script>
+    // ── Edit Mode State ──────────────────────────────────────────────────────
+    let _editMode = false;
+    let _originalValues = {};
+
+    function toggleEditMode() {
+      if (_editMode) {
+        cancelEditMode();
+      } else {
+        enterEditMode();
+      }
+    }
+
+    function enterEditMode() {
+      _editMode = true;
+      _originalValues = {};
+
+      // Save original values and make spans editable
+      document.querySelectorAll('[data-edit-key]').forEach(el => {
+        _originalValues[el.dataset.editKey] = el.innerHTML;
+        el.contentEditable = 'true';
+        el.spellcheck = false;
+        // Prevent Enter from creating <div> or <br>
+        el.addEventListener('keydown', preventEnterKey);
+      });
+
+      document.body.classList.add('edit-mode');
+
+      // Update button
+      const btn = document.getElementById('edit-mode-btn');
+      btn.classList.remove('border-stone-200','bg-white','text-stone-500','hover:text-amber-700');
+      btn.classList.add('border-amber-400','bg-amber-50','text-amber-700');
+      document.getElementById('edit-mode-label').textContent = '結束編輯';
+
+      // Show floating toolbar
+      updateEditCount();
+      document.getElementById('edit-toolbar').classList.add('visible');
+      lucide.createIcons();
+    }
+
+    function preventEnterKey(e) {
+      if (e.key === 'Enter') { e.preventDefault(); }
+    }
+
+    function cancelEditMode() {
+      // Restore original values
+      document.querySelectorAll('[data-edit-key]').forEach(el => {
+        const key = el.dataset.editKey;
+        if (_originalValues[key] !== undefined) {
+          el.innerHTML = _originalValues[key];
+        }
+        el.contentEditable = 'false';
+        el.removeEventListener('keydown', preventEnterKey);
+      });
+
+      _editMode = false;
+      _originalValues = {};
+      exitEditUI();
+    }
+
+    function exitEditUI() {
+      document.body.classList.remove('edit-mode');
+
+      const btn = document.getElementById('edit-mode-btn');
+      btn.classList.add('border-stone-200','bg-white','text-stone-500','hover:text-amber-700');
+      btn.classList.remove('border-amber-400','bg-amber-50','text-amber-700');
+      document.getElementById('edit-mode-label').textContent = '編輯模式';
+
+      document.getElementById('edit-toolbar').classList.remove('visible');
+    }
+
+    function updateEditCount() {
+      const count = document.querySelectorAll('[data-edit-key]').length;
+      document.getElementById('edit-field-count').textContent = count + ' 欄位';
+    }
+
+    function saveEdits() {
+      // Make all spans non-editable before capturing HTML
+      document.querySelectorAll('[data-edit-key]').forEach(el => {
+        el.contentEditable = 'false';
+        el.removeEventListener('keydown', preventEnterKey);
+      });
+
+      // Exit edit UI (keep body changes)
+      _editMode = false;
+      exitEditUI();
+
+      // Build clean HTML string
+      const doctype = '<!DOCTYPE html>\n';
+      const htmlContent = doctype + document.documentElement.outerHTML;
+
+      // Trigger download
+      const blob = new Blob([htmlContent], { type: 'text/html; charset=utf-8' });
+      const url  = URL.createObjectURL(blob);
+      const a    = document.createElement('a');
+      a.href     = url;
+      a.download = 'index.html';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+
+      // Show success toast
+      showToast('✅ 已下載 index.html！上傳到 GitHub 即可生效。');
+    }
+
+    function showToast(msg) {
+      const t = document.createElement('div');
+      t.textContent = msg;
+      t.style.cssText = [
+        'position:fixed','bottom:90px','left:50%',
+        'transform:translateX(-50%)','z-index:99999',
+        'background:#1c1917','color:white','padding:10px 20px',
+        'border-radius:12px','font-size:12px','font-weight:600',
+        'box-shadow:0 4px 20px rgba(0,0,0,0.3)',
+        'transition:opacity 0.4s ease','opacity:1'
+      ].join(';');
+      document.body.appendChild(t);
+      setTimeout(() => { t.style.opacity = '0'; }, 2800);
+      setTimeout(() => { t.remove(); }, 3200);
+    }
   </script>
 </body>
 </html>
