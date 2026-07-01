@@ -651,91 +651,102 @@
           <main id="diagram-container" class="flex-1 overflow-hidden relative w-full h-full min-h-0" onclick="handleCanvasClick(event)">
             
             <!-- Inner Scalable Canvas -->
-            <div id="diagram-canvas" class="origin-top-left transition-transform duration-500 ease-out p-12 min-w-[1480px] min-h-[900px] relative z-10 flex flex-col space-y-16">
+                        <div id="diagram-canvas" class="origin-top-left transition-transform duration-500 ease-out p-12 min-w-[1480px] min-h-[900px] relative z-10 flex flex-col space-y-16">
               
               <!-- SVG Overlay for connections -->
               <svg id="connection-svg" class="absolute top-0 left-0 w-full h-full pointer-events-none z-20"></svg>
         
               <!-- BLOCK 1: Green Onboarding Section -->
-              <section id="block-1" class="glass-panel section-1 rounded-2xl p-7 relative transition-opacity duration-300" onclick="handleBlockClick(event, 'block-1')">
+              <section id="block-1" class="glass-panel section-1 rounded-2xl p-7 relative transition-opacity duration-300 w-max" onclick="handleBlockClick(event, 'block-1')">
                 <div class="absolute -top-3 left-6 px-3 py-0.5 bg-emerald-50 border border-emerald-200 text-emerald-700 text-[10px] font-semibold rounded-full tracking-wider">
-                  區塊一：新家人接待與初步追蹤
+                  <span data-edit-key="s3-block-1-header">區塊一：新家人接待與初步追蹤</span>
                 </div>
                 
                 <div class="flex items-center space-x-8 pt-2">
                   <div id="node-1-1" class="glass-card glow-green w-48 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 border-emerald-500/25" onclick="handleNodeClick(event, '1-1')">
                     <div class="flex justify-between items-start">
-                      <span class="text-[10px] text-emerald-700 font-semibold tracking-wider"><span data-edit-key="s3-01-onboarding">01 / Onboarding</span></span>
+                      <span class="text-[10px] text-emerald-700 font-semibold tracking-wider"><span data-edit-key="s3-node-1-1-step">01 / Arrival</span></span>
                       <i data-lucide="log-in" class="w-3.5 h-3.5 text-emerald-700"></i>
                     </div>
-                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><span data-edit-key="s3-新家人初次蒞臨">新家人初次蒞臨</span></div>
-                    <div class="text-[9px] text-stone-450 mt-1">現場接待點</div>
+                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><span data-edit-key="s3-node-1-1-title">新家人初次蒞臨</span></div>
+                    <div class="text-[9px] text-stone-450 mt-1"><span data-edit-key="s3-node-1-1-sub">篩選分流來源</span></div>
                   </div>
         
                   <i data-lucide="arrow-right" class="w-4 h-4 text-stone-300"></i>
         
-                  <div id="node-1-2" class="glass-card glow-green w-48 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 border-emerald-500/25" onclick="handleNodeClick(event, '1-2')">
-                    <div class="flex justify-between items-start">
-                      <span class="text-[10px] text-emerald-700 font-semibold tracking-wider"><span data-edit-key="s3-02-setup">02 / Setup</span></span>
-                      <i data-lucide="file-text" class="w-3.5 h-3.5 text-emerald-700"></i>
+                  <div class="flex flex-col space-y-4">
+                    <div id="node-1-3" class="glass-card glow-green w-52 p-3.5 rounded-xl cursor-pointer flex flex-col justify-between h-[58px] border-emerald-500/20" onclick="handleNodeClick(event, '1-3')">
+                      <div class="flex justify-between items-center">
+                        <div class="flex flex-col">
+                          <span class="text-[9px] text-emerald-800 font-bold"><span data-edit-key="s3-node-1-3-label">自行走入</span></span>
+                          <span class="text-xs font-bold text-stone-800"><span data-edit-key="s3-node-1-3-title">自行走入新人：固定同工接待填卡</span></span>
+                        </div>
+                        <i data-lucide="user" class="w-3.5 h-3.5 text-emerald-700 shrink-0 ml-1"></i>
+                      </div>
                     </div>
-                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><span data-edit-key="s3-現場接待與協助填寫留名卡">現場接待與<br>協助填寫留名卡</span></div>
-                    <div class="text-[9px] text-stone-450 mt-1">新家人同工</div>
+                    
+                    <div id="node-1-2" class="glass-card glow-green w-52 p-3.5 rounded-xl cursor-pointer flex flex-col justify-between h-[58px] border-emerald-500/20" onclick="handleNodeClick(event, '1-2')">
+                      <div class="flex justify-between items-center">
+                        <div class="flex flex-col">
+                          <span class="text-[9px] text-stone-500 font-bold"><span data-edit-key="s3-node-1-2-label">小組邀請</span></span>
+                          <span class="text-xs font-bold text-stone-700"><span data-edit-key="s3-node-1-2-title">小組邀請新人：小組自行帶回關懷</span></span>
+                        </div>
+                        <i data-lucide="users" class="w-3.5 h-3.5 text-stone-500 shrink-0 ml-1"></i>
+                      </div>
+                    </div>
                   </div>
         
                   <i data-lucide="arrow-right" class="w-4 h-4 text-stone-300"></i>
         
                   <div id="node-1-4" class="glass-card glow-green w-48 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 border-emerald-500/25" onclick="handleNodeClick(event, '1-4')">
                     <div class="flex justify-between items-start">
-                      <span class="text-[10px] text-emerald-700 font-semibold tracking-wider"><span data-edit-key="s3-03-matchmaking">03 / Matchmaking</span></span>
-                      <i data-lucide="users" class="w-3.5 h-3.5 text-emerald-700"></i>
+                      <span class="text-[10px] text-emerald-700 font-semibold tracking-wider"><span data-edit-key="s3-node-1-4-step">02 / Introduction</span></span>
+                      <i data-lucide="handshake" class="w-3.5 h-3.5 text-emerald-700"></i>
                     </div>
-                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><span data-edit-key="s3-主日會後邀請小組代表進行媒合">主日會後<br>邀請小組代表進行媒合</span></div>
-                    <div class="text-[9px] text-stone-450 mt-1">新家人同工</div>
+                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><span data-edit-key="s3-node-1-4-title">主日會後引薦對接</span></div>
+                    <div class="text-[9px] text-stone-450 mt-1"><span data-edit-key="s3-node-1-4-sub">固定同工邀小組認識</span></div>
                   </div>
                   
                   <i data-lucide="arrow-right" class="w-4 h-4 text-stone-300"></i>
         
-                  <div id="node-1-3" class="glass-card glow-green w-48 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 border-emerald-500/25" onclick="handleNodeClick(event, '1-3')">
+                  <div id="node-1-5" class="glass-card glow-green w-48 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 border-emerald-500/25" onclick="handleNodeClick(event, '1-5')">
                     <div class="flex justify-between items-start">
-                      <span class="text-[10px] text-emerald-700 font-semibold tracking-wider"><span data-edit-key="s3-04-tracking">04 / Tracking</span></span>
+                      <span class="text-[10px] text-emerald-700 font-semibold tracking-wider"><span data-edit-key="s3-node-1-5-step">03 / Tracking</span></span>
                       <i data-lucide="calendar" class="w-3.5 h-3.5 text-emerald-700"></i>
                     </div>
-                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><span data-edit-key="s3-初步追蹤-4週內-了解適應狀況">初步追蹤 4週內：<br>了解適應狀況</span></div>
-                    <div class="text-[9px] text-stone-450 mt-1">新家人同工</div>
+                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><span data-edit-key="s3-node-1-5-title">同工追蹤 4週內</span></div>
+                    <div class="text-[9px] text-stone-450 mt-1"><span data-edit-key="s3-node-1-5-sub">固定同工追蹤評估</span></div>
                   </div>
         
-                  <i data-lucide="arrow-right" class="w-4 h-4 text-stone-300"></i>
-        
-                  <div id="node-1-5" class="glass-card glow-green w-44 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 border-emerald-500/25" onclick="handleNodeClick(event, '1-5')">
-                    <div class="flex justify-between items-start">
-                      <span class="text-[10px] text-emerald-700 font-semibold tracking-wider"><span data-edit-key="s3-05-evaluation">05 / Evaluation</span></span>
-                      <i data-lucide="help-circle" class="w-3.5 h-3.5 text-emerald-700"></i>
-                    </div>
-                    <div class="font-bold text-sm text-stone-850 mt-2 text-center"><span data-edit-key="s3-4週內結案評估">4週內結案評估</span></div>
-                    <div class="text-[9px] text-stone-450 text-right mt-1">決策機制</div>
+                  <!-- Inline Buttons Block 1 -->
+                  <i data-lucide="arrow-right" class="w-4 h-4 text-stone-300 add-node-arrow hidden"></i>
+                  <div class="flex items-center space-x-2 shrink-0 ml-4 add-node-btn-group hidden">
+                    <button onclick="openAddNodeModal('block-1', 'normal')" class="border border-dashed border-emerald-300 bg-white hover:bg-emerald-50 text-emerald-700 px-3 py-2 rounded-lg text-[10px] font-bold transition-all shadow-sm">
+                      ＋ 往後插入方塊
+                    </button>
+                    <button onclick="openAddNodeModal('block-1', 'branch')" class="border border-dashed border-emerald-300 bg-white hover:bg-emerald-50 text-emerald-700 px-3 py-2 rounded-lg text-[10px] font-bold transition-all shadow-sm">
+                      ＋ 新增分支方塊
+                    </button>
                   </div>
-        
-                  <i data-lucide="arrow-right" class="w-4 h-4 text-stone-300"></i>
         
                   <div class="flex flex-col space-y-4 pr-4 border-r border-stone-200">
                     <div id="node-1-6" class="glass-card glow-green w-48 p-3.5 rounded-xl cursor-pointer flex flex-col justify-between h-[58px] border-emerald-500/20" onclick="handleNodeClick(event, '1-6')">
                       <div class="flex justify-between items-center">
                         <div class="flex flex-col">
-                          <span class="text-[9px] text-emerald-800 font-bold">是 (落戶)</span>
-                          <span class="text-xs font-bold text-stone-800">開始落戶程序：分派給指定小組</span>
+                          <span class="text-[9px] text-emerald-800 font-bold"><span data-edit-key="s3-node-1-6-label">是 (穩定融入)</span></span>
+                          <span class="text-xs font-bold text-stone-800"><span data-edit-key="s3-node-1-6-title">開始落戶程序：小組承接常態關懷</span></span>
                         </div>
-                        <i data-lucide="check" class="w-3 h-3 text-emerald-700 shrink-0 ml-1"></i>
+                        <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-700 shrink-0 ml-1"></i>
                       </div>
                     </div>
                     
                     <div id="node-1-7" class="glass-card glow-green w-48 p-3.5 rounded-xl cursor-pointer flex flex-col justify-between h-[58px] border-emerald-500/20" onclick="handleNodeClick(event, '1-7')">
                       <div class="flex justify-between items-center">
                         <div class="flex flex-col">
-                          <span class="text-[9px] text-stone-500 font-bold">否 (結案)</span>
-                          <span class="text-xs font-bold text-stone-750">請安拜訪結案：未再出現或去他處</span>
+                          <span class="text-[9px] text-stone-500 font-bold"><span data-edit-key="s3-node-1-7-label">否 (連續4週未出席)</span></span>
+                          <span class="text-xs font-bold text-stone-750"><span data-edit-key="s3-node-1-7-title">列入請安拜訪：小組探訪與結案</span></span>
                         </div>
-                        <i data-lucide="archive" class="w-3 h-3 text-stone-500 shrink-0 ml-1"></i>
+                        <i data-lucide="archive" class="w-3.5 h-3.5 text-stone-500 shrink-0 ml-1"></i>
                       </div>
                     </div>
                   </div>
@@ -743,30 +754,30 @@
               </section>
         
               <!-- BLOCK 2: Blue System Monitoring Section -->
-              <section id="block-2" class="glass-panel section-2 rounded-2xl p-7 relative transition-opacity duration-300" onclick="handleBlockClick(event, 'block-2')">
+              <section id="block-2" class="glass-panel section-2 rounded-2xl p-7 relative transition-opacity duration-300 w-max" onclick="handleBlockClick(event, 'block-2')">
                 <div class="absolute -top-3 left-6 px-3 py-0.5 bg-blue-50 border border-blue-200 text-blue-700 text-[10px] font-semibold rounded-full tracking-wider">
-                  區塊二：系統觀察與轉介
+                  <span data-edit-key="s3-block-2-header">區塊二：系統觀察與轉介</span>
                 </div>
                 
                 <div class="flex items-center space-x-8 pt-2">
                   <div id="node-2-1" class="glass-card glow-blue w-48 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 border-blue-500/25" onclick="handleNodeClick(event, '2-1')">
                     <div class="flex justify-between items-start">
-                      <span class="text-[10px] text-blue-700 font-semibold tracking-wider"><span data-edit-key="s3-01-system">01 / System</span></span>
+                      <span class="text-[10px] text-blue-700 font-semibold tracking-wider"><span data-edit-key="s3-node-2-1-step">01 / System</span></span>
                       <i data-lucide="database" class="w-3.5 h-3.5 text-blue-700"></i>
                     </div>
-                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><span data-edit-key="s3-主日點名系統">主日點名系統</span></div>
-                    <div class="text-[9px] text-stone-450 mt-1">每週數據回報</div>
+                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><span data-edit-key="s3-node-2-1-title">主日點名系統</span></div>
+                    <div class="text-[9px] text-stone-450 mt-1"><span data-edit-key="s3-node-2-1-sub">每週數據回報</span></div>
                   </div>
         
                   <i data-lucide="arrow-right" class="w-4 h-4 text-stone-300"></i>
         
                   <div id="node-2-2" class="glass-card glow-blue w-48 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 border-blue-500/25" onclick="handleNodeClick(event, '2-2')">
                     <div class="flex justify-between items-start">
-                      <span class="text-[10px] text-blue-700 font-semibold tracking-wider"><span data-edit-key="s3-02-analysis">02 / Analysis</span></span>
+                      <span class="text-[10px] text-blue-700 font-semibold tracking-wider"><span data-edit-key="s3-node-2-2-step">02 / Analysis</span></span>
                       <i data-lucide="bar-chart-2" class="w-3.5 h-3.5 text-blue-700"></i>
                     </div>
-                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><span data-edit-key="s3-1個月內出席狀況">1個月內出席狀況</span></div>
-                    <div class="text-[9px] text-stone-450 mt-1">系統判定分流</div>
+                    <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><span data-edit-key="s3-node-2-2-title">1個月內出席狀況</span></div>
+                    <div class="text-[9px] text-stone-450 mt-1"><span data-edit-key="s3-node-2-2-sub">系統判定分流</span></div>
                   </div>
         
                   <i data-lucide="arrow-right" class="w-4 h-4 text-stone-300"></i>
@@ -775,20 +786,20 @@
                     <div id="node-2-3" class="glass-card glow-blue w-52 p-3.5 rounded-xl cursor-pointer flex flex-col justify-between h-[58px] border-blue-500/20" onclick="handleNodeClick(event, '2-3')">
                       <div class="flex justify-between items-center">
                         <div class="flex flex-col">
-                          <span class="text-[9px] text-blue-800 font-bold">第二次出席 (標準件)</span>
-                          <span class="text-xs font-bold text-stone-800">標準件：加入系統名單</span>
+                          <span class="text-[9px] text-blue-800 font-bold"><span data-edit-key="s3-node-2-3-label">第二次出席 (標準件)</span></span>
+                          <span class="text-xs font-bold text-stone-800"><span data-edit-key="s3-node-2-3-title">標準件：加入系統名單</span></span>
                         </div>
-                        <i data-lucide="user-check" class="w-3 h-3 text-blue-700 shrink-0 ml-1"></i>
+                        <i data-lucide="user-check" class="w-3.5 h-3.5 text-blue-700 shrink-0 ml-1"></i>
                       </div>
                     </div>
                     
                     <div id="node-2-4" class="glass-card glow-blue w-52 p-3.5 rounded-xl cursor-pointer flex flex-col justify-between h-[58px] border-blue-500/20" onclick="handleNodeClick(event, '2-4')">
                       <div class="flex justify-between items-center">
                         <div class="flex flex-col">
-                          <span class="text-[9px] text-stone-500 font-bold">間隔超過1個月 (觀察件)</span>
-                          <span class="text-xs font-bold text-stone-750">觀察件：暫不加入，持續觀察</span>
+                          <span class="text-[9px] text-stone-500 font-bold"><span data-edit-key="s3-node-2-4-label">間隔超過1個月 (觀察件)</span></span>
+                          <span class="text-xs font-bold text-stone-750"><span data-edit-key="s3-node-2-4-title">觀察件：暫不加入，持續觀察</span></span>
                         </div>
-                        <i data-lucide="eye" class="w-3 h-3 text-stone-500 shrink-0 ml-1"></i>
+                        <i data-lucide="eye" class="w-3.5 h-3.5 text-stone-500 shrink-0 ml-1"></i>
                       </div>
                     </div>
                   </div>
@@ -801,7 +812,7 @@
                       <i data-lucide="clock" class="w-3.5 h-3.5 text-blue-700"></i>
                     </div>
                     <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><span data-edit-key="s3-後期追蹤-1-2個月-觀察小組長是否新增名單">後期追蹤 1-2個月：<br>觀察小組長是否新增名單</span></div>
-                    <div class="text-[9px] text-stone-450 mt-1">小組長定期回報</div>
+                    <div class="text-[9px] text-stone-450 mt-1"><span data-edit-key="s3-node-2-5-sub">小組長定期回報</span></div>
                   </div>
         
                   <i data-lucide="arrow-right" class="w-4 h-4 text-stone-300"></i>
@@ -812,29 +823,38 @@
                       <i data-lucide="check-square" class="w-3.5 h-3.5 text-blue-700"></i>
                     </div>
                     <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><span data-edit-key="s3-是否於小組實際出現">是否於小組<br>實際出現？</span></div>
-                    <div class="text-[9px] text-stone-450 mt-1">最終確認</div>
+                    <div class="text-[9px] text-stone-450 mt-1"><span data-edit-key="s3-node-2-6-sub">最終確認</span></div>
                   </div>
         
-                  <i data-lucide="arrow-right" class="w-4 h-4 text-stone-300"></i>
+                  <!-- Inline Buttons Block 2 -->
+                  <i data-lucide="arrow-right" class="w-4 h-4 text-stone-300 add-node-arrow hidden"></i>
+                  <div class="flex items-center space-x-2 shrink-0 ml-4 add-node-btn-group hidden">
+                    <button onclick="openAddNodeModal('block-2', 'normal')" class="border border-dashed border-blue-300 bg-white hover:bg-blue-50 text-blue-700 px-3 py-2 rounded-lg text-[10px] font-bold transition-all shadow-sm">
+                      ＋ 往後插入方塊
+                    </button>
+                    <button onclick="openAddNodeModal('block-2', 'branch')" class="border border-dashed border-blue-300 bg-white hover:bg-blue-50 text-blue-700 px-3 py-2 rounded-lg text-[10px] font-bold transition-all shadow-sm">
+                      ＋ 新增分支方塊
+                    </button>
+                  </div>
         
                   <div class="flex flex-col space-y-4">
                     <div id="node-2-7" class="glass-card glow-blue w-52 p-3.5 rounded-xl cursor-pointer flex flex-col justify-between h-[58px] border-blue-500/20" onclick="handleNodeClick(event, '2-7')">
                       <div class="flex justify-between items-center">
                         <div class="flex flex-col">
-                          <span class="text-[9px] text-emerald-800 font-bold">已出席 (順利融入)</span>
-                          <span class="text-xs font-bold text-stone-800">程序完結：交由小組常態關懷</span>
+                          <span class="text-[9px] text-emerald-800 font-bold"><span data-edit-key="s3-node-2-7-label">已出席 (順利融入)</span></span>
+                          <span class="text-xs font-bold text-stone-800"><span data-edit-key="s3-node-2-7-title">程序完結：交由小組常態關懷</span></span>
                         </div>
-                        <i data-lucide="heart" class="w-3 h-3 text-emerald-700 shrink-0 ml-1"></i>
+                        <i data-lucide="heart" class="w-3.5 h-3.5 text-emerald-700 shrink-0 ml-1"></i>
                       </div>
                     </div>
                     
                     <div id="node-2-8" class="glass-card glow-blue w-52 p-3.5 rounded-xl cursor-pointer flex flex-col justify-between h-[58px] border-blue-500/20" onclick="handleNodeClick(event, '2-8')">
                       <div class="flex justify-between items-center">
                         <div class="flex flex-col">
-                          <span class="text-[9px] text-orange-800 font-bold">遲未出現 (轉介點)</span>
-                          <span class="text-xs font-bold text-stone-750">持續關懷滿3個月：提報轉介</span>
+                          <span class="text-[9px] text-orange-800 font-bold"><span data-edit-key="s3-node-2-8-label">遲未出現 (轉介點)</span></span>
+                          <span class="text-xs font-bold text-stone-750"><span data-edit-key="s3-node-2-8-title">持續關懷防護：提報轉介</span></span>
                         </div>
-                        <i data-lucide="alert-triangle" class="w-3 h-3 text-orange-700 shrink-0 ml-1"></i>
+                        <i data-lucide="alert-triangle" class="w-3.5 h-3.5 text-orange-700 shrink-0 ml-1"></i>
                       </div>
                     </div>
                   </div>
@@ -848,15 +868,15 @@
                     <span class="text-[10px] text-orange-700 font-semibold tracking-wider"><span data-edit-key="s3-04b-care-group-takeover">04B / Care Group Takeover</span></span>
                     <i data-lucide="heart-handshake" class="w-3.5 h-3.5 text-orange-700"></i>
                   </div>
-                  <div class="font-bold text-xs text-stone-850 mt-1">關懷組接手</div>
-                  <div class="text-[9px] text-stone-450 mt-1">收治兩處高風險個案之轉介</div>
+                  <div class="font-bold text-xs text-stone-850 mt-1"><span data-edit-key="s3-node-3-7-title">關懷組接手</span></div>
+                  <div class="text-[9px] text-stone-450 mt-1"><span data-edit-key="s3-node-3-7-sub">收治兩處高風險個案之轉介</span></div>
                 </div>
               </div>
         
               <!-- BLOCK 3: Orange Regular Pastoring Section -->
-              <section id="block-3" class="glass-panel section-3 rounded-2xl p-7 relative transition-opacity duration-300" onclick="handleBlockClick(event, 'block-3')">
+              <section id="block-3" class="glass-panel section-3 rounded-2xl p-7 relative transition-opacity duration-300 w-max" onclick="handleBlockClick(event, 'block-3')">
                 <div class="absolute -top-3 left-6 px-3 py-0.5 bg-amber-50 border border-amber-200 text-amber-700 text-[10px] font-semibold rounded-full tracking-wider">
-                  區塊三：常態收治與防護異常處理
+                  <span data-edit-key="s3-block-3-header">區塊三：常態收治與防護異常處理</span>
                 </div>
                 
                 <div class="flex items-center space-x-8 pt-2">
@@ -866,7 +886,7 @@
                       <i data-lucide="eye" class="w-3.5 h-3.5 text-amber-700"></i>
                     </div>
                     <div class="font-bold text-xs text-stone-800 mt-2 leading-relaxed"><span data-edit-key="s3-牧養組-每週數據觀察-觀察禮拜-主日學出席">牧養組：每週數據觀察：<br>觀察禮拜/主日學出席</span></div>
-                    <div class="text-[9px] text-stone-450 mt-1">常態數據比對</div>
+                    <div class="text-[9px] text-stone-450 mt-1"><span data-edit-key="s3-node-3-1-sub">常態數據比對</span></div>
                   </div>
         
                   <i data-lucide="arrow-right" class="w-4 h-4 text-stone-300"></i>
@@ -877,7 +897,7 @@
                       <i data-lucide="trending-down" class="w-3.5 h-3.5 text-amber-700"></i>
                     </div>
                     <div class="font-bold text-sm text-stone-850 mt-2 text-center"><span data-edit-key="s3-出席頻率下滑或異常變化">出席頻率下滑<br>或異常變化？</span></div>
-                    <div class="text-[9px] text-stone-450 text-right mt-1">出席預警</div>
+                    <div class="text-[9px] text-stone-450 text-right mt-1"><span data-edit-key="s3-node-3-2-sub">出席預警</span></div>
                   </div>
         
                   <i data-lucide="arrow-right" class="w-4 h-4 text-stone-300"></i>
@@ -888,7 +908,7 @@
                       <i data-lucide="help-circle" class="w-3.5 h-3.5 text-amber-700"></i>
                     </div>
                     <div class="font-bold text-sm text-stone-850 mt-2 text-center"><span data-edit-key="s3-是否有小組">是否有小組？</span></div>
-                    <div class="text-[9px] text-stone-450 text-right mt-1">系統身分檢查</div>
+                    <div class="text-[9px] text-stone-450 text-right mt-1"><span data-edit-key="s3-node-3-3-sub">系統身分檢查</span></div>
                   </div>
         
                   <i data-lucide="arrow-right" class="w-4 h-4 text-stone-300"></i>
@@ -899,7 +919,7 @@
                       <i data-lucide="message-square" class="w-3.5 h-3.5 text-orange-700"></i>
                     </div>
                     <div class="font-bold text-xs text-stone-800 mt-2 leading-relaxed"><span data-edit-key="s3-牧養組主動詢問小組長">牧養組主動詢問小組長</span></div>
-                    <div class="text-[9px] text-stone-450 mt-1">評估是否需協助</div>
+                    <div class="text-[9px] text-stone-450 mt-1"><span data-edit-key="s3-node-3-4-sub">評估是否需協助</span></div>
                   </div>
                   
                   <i data-lucide="arrow-right" class="w-4 h-4 text-stone-300"></i>
@@ -910,7 +930,7 @@
                       <i data-lucide="users" class="w-3.5 h-3.5 text-orange-700"></i>
                     </div>
                     <div class="font-bold text-xs text-stone-800 mt-2 leading-relaxed"><span data-edit-key="s3-定期個案研討-小組長與區長-牧者會面">定期個案研討：<br>小組長與區長/牧者會面</span></div>
-                    <div class="text-[9px] text-stone-450 mt-1">個案研討</div>
+                    <div class="text-[9px] text-stone-450 mt-1"><span data-edit-key="s3-node-3-5-sub">個案研討</span></div>
                   </div>
         
                   <i data-lucide="arrow-right" class="w-4 h-4 text-stone-300"></i>
@@ -921,14 +941,32 @@
                       <i data-lucide="clipboard-list" class="w-3.5 h-3.5 text-orange-700"></i>
                     </div>
                     <div class="font-bold text-xs text-stone-800 mt-2 leading-relaxed"><span data-edit-key="s4-擬定具體關懷與協調方案">擬定具體關懷與<br>協調方案</span></div>
-                    <div class="text-[9px] text-stone-450 mt-1">行動方案落實</div>
+                    <div class="text-[9px] text-stone-450 mt-1"><span data-edit-key="s3-node-3-6-sub">行動方案落實</span></div>
                   </div>
         
+                  <!-- Inline Buttons Block 3 -->
+                  <i data-lucide="arrow-right" class="w-4 h-4 text-stone-300 add-node-arrow hidden"></i>
+                  <div class="flex items-center space-x-2 shrink-0 ml-4 add-node-btn-group hidden">
+                    <button onclick="openAddNodeModal('block-3', 'normal')" class="border border-dashed border-amber-300 bg-white hover:bg-amber-50 text-amber-700 px-3 py-2 rounded-lg text-[10px] font-bold transition-all shadow-sm">
+                      ＋ 往後插入方塊
+                    </button>
+                    <button onclick="openAddNodeModal('block-3', 'branch')" class="border border-dashed border-amber-300 bg-white hover:bg-amber-50 text-amber-700 px-3 py-2 rounded-lg text-[10px] font-bold transition-all shadow-sm">
+                      ＋ 新增分支方塊
+                    </button>
+                  </div>
                 </div>
               </section>
         
-            </div>
+              <!-- Add Block Button Container at the bottom -->
+              <div id="add-block-container" class="w-full flex justify-center py-4 hidden">
+                <button onclick="addNewBlock()" class="border-2 border-dashed border-stone-300 hover:border-amber-500 hover:bg-amber-50/50 text-stone-500 hover:text-amber-700 px-6 py-3 rounded-2xl text-xs font-bold transition-all flex items-center gap-2">
+                  <i data-lucide="plus-circle" class="w-5 h-5"></i>
+                  <span>➕ 插入新區塊</span>
+                </button>
+              </div>
         
+            </div>
+
             <!-- Floating Reset Zoom Overlay Button -->
             <div id="reset-zoom-floating" class="absolute bottom-6 left-6 z-30 transition-opacity duration-300 opacity-0 pointer-events-none">
               <button onclick="resetZoom()" class="bg-white hover:bg-stone-50 border border-stone-200 text-stone-600 px-4 py-2.5 rounded-full text-xs font-semibold shadow-md flex items-center gap-1.5 pointer-events-auto">
@@ -954,7 +992,7 @@
               <!-- Circle 1 -->
               <div class="flex flex-col items-center space-y-1 bg-white p-3 rounded-xl border border-stone-200/60 shadow-sm">
                 <div class="w-8 h-8 rounded-full bg-emerald-50 border-2 border-emerald-500 flex items-center justify-center text-xs font-bold text-emerald-700 shadow-sm shadow-emerald-500/10"><span data-edit-key="s4-1-新家人關懷">1</div>
-                <span class="text-[10px] text-emerald-800 font-bold">新家人關懷</span></span></div>
+                <span class="text-[10px] text-emerald-800 font-bold">固定同工關懷 (限自行前來)</span></span></div>
               
               <!-- Flow line 1-2 -->
               <div class="flex-1 flex flex-col items-center mx-4 space-y-1">
@@ -994,10 +1032,10 @@
                 </div>
                 <div class="space-y-2 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 class="text-base font-bold text-emerald-950"><span data-edit-key="s4-新家人同工-系統">新家人同工 / 系統</span></h3>
+                    <h3 class="text-base font-bold text-emerald-950"><span data-edit-key="s4-新家人同工-系統">固定新家人同工 / 系統</span></h3>
                     <span class="inline-block px-2 py-0.5 bg-emerald-100/60 text-emerald-750 rounded text-[9px] font-bold mt-1">時程：0 - 4 週</span>
                     <p class="text-xs text-emerald-900 font-medium leading-relaxed mt-2.5">
-                      負責初次接待、4週內初步追蹤，以及系統建檔。
+                      負責自行走入者現場接待、媒合以及4週內初步追蹤 (限自行走入)。
                     </p>
                   </div>
                   <p class="text-[10px] text-emerald-700/80 font-bold italic mt-3 pt-3 border-t border-emerald-200/50">
@@ -1073,7 +1111,7 @@
             <div class="text-center space-y-2">
               <span class="text-[10px] bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1 rounded-full font-bold uppercase tracking-wider"><span data-edit-key="s5-區塊一細節">區塊一細節</span></span>
               <h2 class="text-2xl font-bold text-stone-850 mt-2"><span data-edit-key="s5-新家人接待與初步追蹤">新家人接待與初步追蹤</span></h2>
-              <p class="text-xs text-stone-500"><span data-edit-key="s5-從初次蒞臨到小組實體媒合-在黃金四週內建立初步信任與適應評估">從初次蒞臨到小組實體媒合，在黃金四週內建立初步信任與適應評估。</span></p>
+              <p class="text-xs text-stone-500"><span data-edit-key="s5-從初次蒞臨到會後引薦對接小組-在黃金四週內建立初步信任與適應評估">從初次蒞臨到會後引薦對接小組，在黃金四週內建立初步信任與適應評估。</span></p>
             </div>
             
             <!-- Horizontal Timeline Visual -->
@@ -1083,9 +1121,9 @@
                 <div class="w-12 h-12 bg-white border-2 border-emerald-500 rounded-full flex items-center justify-center font-bold text-sm text-emerald-700 shadow-md shadow-emerald-500/10 shrink-0"><span data-edit-key="s5-day-0">Day 0</span></div>
                 <div class="space-y-1.5">
                   <h3 class="text-base font-bold text-emerald-950"><span data-edit-key="s5-蒞臨與建檔">蒞臨與建檔</span></h3>
-                  <p class="text-[10px] text-emerald-800 font-bold bg-emerald-100/50 border border-emerald-200 px-2 py-0.5 rounded inline-block">新家人初次蒞臨 ➔ 現場接待建檔</p>
+                  <p class="text-[10px] text-emerald-800 font-bold bg-emerald-100/50 border border-emerald-200 px-2 py-0.5 rounded inline-block">新家人初次蒞臨 ➔ 篩選分流來源</p>
                   <p class="text-xs text-emerald-900/90 leading-relaxed font-medium">
-                    新家人到場後由接待同工親切迎接，帶領入座；接待處邀請填寫留名表，並於當天由行政人員登錄系統。
+                    新家人到場後分流為「小組邀請」（小組自行關懷，同工不介入）與「自行走入」（由固定同工現場接待與填卡）。
                   </p>
                 </div>
               </div>
@@ -1095,9 +1133,9 @@
                 <div class="w-12 h-12 bg-white border-2 border-emerald-500 rounded-full flex items-center justify-center font-bold text-sm text-emerald-700 shadow-md shadow-emerald-500/10 shrink-0"><span data-edit-key="s5-w-1-3">W 1-3</span></div>
                 <div class="space-y-1.5">
                   <h3 class="text-base font-bold text-emerald-950"><span data-edit-key="s5-適應狀況評估">適應狀況評估</span></h3>
-                  <p class="text-[10px] text-emerald-800 font-bold bg-emerald-100/50 border border-emerald-200 px-2 py-0.5 rounded inline-block">初步追蹤 ➔ 評估小組</p>
+                  <p class="text-[10px] text-emerald-800 font-bold bg-emerald-100/50 border border-emerald-200 px-2 py-0.5 rounded inline-block">會後引薦對接 ➔ 評估適合小組</p>
                   <p class="text-xs text-emerald-900/90 leading-relaxed font-medium">
-                    建檔後4週內，由關懷同工進行電話、簡訊或探訪，了解適應狀況，並依年齡、時間、工作與個性媒合適當小組。
+                    主日會後由固定同工直接邀請適合的小組長前來與新人認識，小組長正式承接並開始建立關係。
                   </p>
                 </div>
               </div>
@@ -1107,9 +1145,9 @@
                 <div class="w-12 h-12 bg-white border-2 border-emerald-500 rounded-full flex items-center justify-center font-bold text-sm text-emerald-700 shadow-md shadow-emerald-500/10 shrink-0"><span data-edit-key="s6-week-0-4">Week 0-4</span></div>
                 <div class="space-y-1.5">
                   <h3 class="text-base font-bold text-emerald-950"><span data-edit-key="s5-實體媒合">實體媒合</span></h3>
-                  <p class="text-[10px] text-emerald-800 font-bold bg-emerald-100/50 border border-emerald-200 px-2 py-0.5 rounded inline-block">主日會後 ➔ 實體媒合小組長</p>
+                  <p class="text-[10px] text-emerald-800 font-bold bg-emerald-100/50 border border-emerald-200 px-2 py-0.5 rounded inline-block">同工追蹤 4 週 ➔ 移交常態關懷</p>
                   <p class="text-xs text-emerald-900/90 leading-relaxed font-medium">
-                    利用主日會後空檔，由新家人同工協助新朋友與經評估合適的小組代表面對面交談，建立小組關懷起點。
+                    針對自行走入者，由固定同工進行 4 週初步關懷評估；4週後若穩定則移交小組，否則提報轉介與探訪。
                   </p>
                 </div>
               </div>
@@ -1129,7 +1167,7 @@
             <div class="text-center space-y-2">
               <span class="text-[10px] bg-amber-50 border border-amber-200 text-amber-700 px-3 py-1 rounded-full font-bold uppercase tracking-wider"><span data-edit-key="s6-區塊一決策分流">區塊一決策分流</span></span>
               <h2 class="text-2xl font-bold text-stone-850 mt-2"><span data-edit-key="s6-4週結案評估分流">4週結案評估分流</span></h2>
-              <p class="text-xs text-stone-500"><span data-edit-key="s6-追蹤滿4週後進行分流判定-確保能即時將新人分派到小組-或針對不再出席者辦理請安結">追蹤滿4週後進行分流判定，確保能即時將新人分派到小組，或針對不再出席者辦理請安結案。</span></p>
+              <p class="text-xs text-stone-500"><span data-edit-key="s6-追蹤滿4週後進行分流判定-確保能即時將新人分派到小組-或針對不再出席者辦理請安結">針對自行走入者於4週後進行評估；若連續4週未出席，則移交小組列入「請安拜訪」與探訪結案。，或針對不再出席者辦理請安結案。</span></p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
@@ -1225,7 +1263,7 @@
             <div class="text-center space-y-2">
               <span class="text-[10px] bg-blue-50 border border-blue-200 text-blue-700 px-3 py-1 rounded-full font-bold uppercase tracking-wider"><span data-edit-key="s8-區塊二細節">區塊二細節</span></span>
               <h2 class="text-2xl font-bold text-stone-850 mt-2"><span data-edit-key="s8-過渡期觀察與落戶確認">過渡期觀察與落戶確認</span></h2>
-              <p class="text-xs text-stone-500"><span data-edit-key="s8-在轉介後的-1-2-個月過渡期內-小組長與新家人同工同步關心-落實實體聚會確認與">在轉介後的 1-2 個月過渡期內，小組長與新家人同工同步關心，落實實體聚會確認與落戶存檔。</span></p>
+              <p class="text-xs text-stone-500"><span data-edit-key="s8-在轉介後的-1-2-個月過渡期內-小組長與新家人同工同步關心-落實實體聚會確認與">在轉介後的 1-2 個月過渡期內由小組長主導關心，並於第 6 個月及年底進行落戶狀況再確認。，落實實體聚會確認與落戶存檔。</span></p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
@@ -1450,7 +1488,7 @@
             <div class="text-center space-y-2">
               <span class="text-[10px] bg-orange-50 border border-orange-200 text-orange-700 px-3 py-1 rounded-full font-bold uppercase tracking-wider"><span data-edit-key="s12-個案研討">個案研討</span></span>
               <h2 class="text-2xl font-bold text-stone-850 mt-2"><span data-edit-key="s12-深度關懷對接-定期個案研討會">深度關懷對接：定期個案研討會</span></h2>
-              <p class="text-xs text-stone-500"><span data-edit-key="s12-藉由小組長-區長與牧長團隊的定期會面-共同研討困難個案-擬定具體且可行的協調關懷">藉由小組長、區長與牧長團隊的定期會面，共同研討困難個案，擬定具體且可行的協調關懷方案。</span></p>
+              <p class="text-xs text-stone-500"><span data-edit-key="s12-藉由小組長-區長與牧長團隊的定期會面-研討困難個案與定義關懷期限邊界（1-2年），防止小羊掉球並重新對接-擬定具體且可行的協調關懷">藉由小組長、區長與牧長團隊的定期會面，研討困難個案與定義關懷期限邊界（1-2年），防止小羊掉球並重新對接，擬定具體且可行的協調關懷方案。</span></p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4 items-center">
@@ -1516,10 +1554,10 @@
                   <thead>
                     <tr class="bg-stone-100 border-b border-stone-200">
                       <th class="p-4 font-bold text-stone-700 w-32">角色 \ 時間軸</th>
-                      <th class="p-4 font-bold text-emerald-800 bg-emerald-50/20 w-44">4週內 (新家人接待)</th>
-                      <th class="p-4 font-bold text-blue-800 bg-blue-50/20 w-44">1-2個月 (過渡期觀察)</th>
-                      <th class="p-4 font-bold text-orange-800 bg-orange-50/20 w-44">滿3個月 (轉介介入點)</th>
-                      <th class="p-4 font-bold text-stone-700 w-44">常態/每週 (防護監控)</th>
+                      <th class="p-4 font-bold text-emerald-800 bg-emerald-50/20 w-44">4週內 (接待與分流)</th>
+                      <th class="p-4 font-bold text-blue-800 bg-blue-50/20 w-44">1-2個月 (小組常態融入)</th>
+                      <th class="p-4 font-bold text-orange-800 bg-orange-50/20 w-44">第3-6個月 (落戶檢核與轉介)</th>
+                      <th class="p-4 font-bold text-stone-700 w-44">常態/年底 (防護與年終審查)</th>
                     </tr>
                   </thead>
                   <tbody class="divide-y divide-stone-100">
@@ -1527,9 +1565,9 @@
                       <td class="p-4 font-bold text-stone-800">新家人同工</td>
                       <td class="p-4 bg-emerald-50/[0.05]">
                         <div class="space-y-1">
-                          <span class="block px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded text-[10px] w-max font-semibold">現場接待與建檔</span>
-                          <span class="block px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded text-[10px] w-max font-semibold">4週內初步追蹤</span>
-                          <span class="block px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded text-[10px] w-max font-semibold">小組實體媒合</span>
+                          <span class="block px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded text-[10px] w-max font-semibold">現場接待與來源分流</span>
+                          <span class="block px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded text-[10px] w-max font-semibold">4週內初步追蹤 (限自行走入)</span>
+                          <span class="block px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded text-[10px] w-max font-semibold">會後引薦對接小組</span>
                         </div>
                       </td>
                       <td class="p-4 bg-blue-50/[0.05]">
@@ -1546,10 +1584,10 @@
                     
                     <tr class="hover:bg-stone-50/40">
                       <td class="p-4 font-bold text-stone-800">小組長 / 小組</td>
-                      <td class="p-4 text-stone-400 bg-emerald-50/[0.05]">-</td>
+                      <td class="p-4 bg-emerald-50/[0.05]"><div class="space-y-1"><span class="block px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded text-[10px] w-max font-semibold">首日接待 (小組邀請)</span><span class="block px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded text-[10px] w-max font-semibold">小組自行關懷 (不經手同工)</span></div></td>
                       <td class="p-4 bg-blue-50/[0.05]">
                         <div class="space-y-1">
-                          <span class="block px-2 py-0.5 bg-blue-50 text-blue-700 rounded text-[10px] w-max font-semibold">手動新增新人至名冊</span>
+                          <span class="block px-2 py-0.5 bg-blue-50 text-blue-700 rounded text-[10px] w-max font-semibold">小組自行引導與融入</span>
                           <span class="block px-2 py-0.5 bg-blue-50 text-blue-700 rounded text-[10px] w-max font-semibold">接收並確認出席</span>
                         </div>
                       </td>
@@ -1565,7 +1603,7 @@
                     
                     <tr class="hover:bg-stone-50/40">
                       <td class="p-4 font-bold text-stone-800">關懷組</td>
-                      <td class="p-4 text-stone-400 bg-emerald-50/[0.05]">-</td>
+                      <td class="p-4 bg-emerald-50/[0.05]"><div class="space-y-1"><span class="block px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded text-[10px] w-max font-semibold">首日接待 (小組邀請)</span><span class="block px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded text-[10px] w-max font-semibold">小組自行關懷 (不經手同工)</span></div></td>
                       <td class="p-4 text-stone-400 bg-blue-50/[0.05]">-</td>
                       <td class="p-4 bg-orange-50/[0.05]">
                         <span class="block px-2 py-0.5 bg-orange-600 text-white rounded text-[10px] w-max font-semibold">接手遲未落戶個案</span>
@@ -1576,7 +1614,7 @@
                     
                     <tr class="hover:bg-stone-50/40">
                       <td class="p-4 font-bold text-stone-800">牧養組 / 區長</td>
-                      <td class="p-4 text-stone-400 bg-emerald-50/[0.05]">-</td>
+                      <td class="p-4 bg-emerald-50/[0.05]"><div class="space-y-1"><span class="block px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded text-[10px] w-max font-semibold">首日接待 (小組邀請)</span><span class="block px-2 py-0.5 bg-emerald-50 text-emerald-700 rounded text-[10px] w-max font-semibold">小組自行關懷 (不經手同工)</span></div></td>
                       <td class="p-4 text-stone-400 bg-blue-50/[0.05]">-</td>
                       <td class="p-4 text-stone-400 bg-orange-50/[0.05]">-</td>
                       <td class="p-4">
@@ -1679,13 +1717,13 @@
 
     // Nodes Data Definition
     const nodesData = {
-      '1-1': { title: '新家人初次蒞臨', step: '區塊一 - 第一步', owner: '現場新家人關懷組', desc: '新家人（初次來到教會的來賓）到場。同工進行親切迎接，帶領入座，並給予初步歡迎。' },
-      '1-2': { title: '現場接待與基本資料建檔', step: '區塊一 - 第二步', owner: '新家接待組 / 行政同工', desc: '於接待處邀請新朋友填寫留名表，並由行政同工在當天即時登錄至「新家人名單資料庫」，記錄基本聯絡方式。' },
-      '1-3': { title: '初步追蹤 4週內：了解適應狀況/評估小組', step: '區塊一 - 第三步', owner: '關懷同工', desc: '建檔後4週內，關懷同工進行電話、簡訊或實體聯絡，了解新家人適應狀況，並根據新家人的背景與特質，評估合適的小組。' },
-      '1-4': { title: '主日會後實體媒合小組長', step: '區塊一 - 第四步', owner: '小組 / 區長', desc: '利用主日崇拜結束後的空檔，由或區長現場穿針引線，帶領新朋友與評估合適的小組長進行實體見面、交談，建立第一步連結。' },
-      '1-5': { title: '4週結案評估', step: '區塊一 - 第五步 (決策點)', owner: '關懷委員會 / ', desc: '評估新家人追蹤滿4週的狀況。此處為分流評估：\n1. 若新朋友適應良好並同意加入小組 ➔ 開始落戶程序。\n2. 若新朋友不再出現或改去其他教會 ➔ 請安拜訪結案。' },
-      '1-6': { title: '開始落戶程序：分派給指定小組', step: '區塊一 - 決策分流 (是)', owner: '新家接待組 / 接收小組長', desc: '正式啟動新家人落戶程序，將新家人資訊分派給指定小組長，由小組長接手後續關懷。同時，該新家人會被加入到「主日點名系統」名單中。' },
-      '1-7': { title: '請安拜訪結案：未再出現或去他處', step: '區塊一 - 決策分流 (否)', owner: '關懷小組 / 牧養組', desc: '針對無法進入小組的新朋友，進行最後一次探訪或請安聯絡，隨後辦理結案存檔。日後僅於大慶典或節日發送問候。' },
+      '1-1': { title: '新家人初次蒞臨', step: '區塊一 - 第一步 (來源分流)', owner: '固定新家人同工', desc: '新朋友蒞臨主日。現場由固定同工進行接待與初步引導，並將其區分為「小組邀約」或「自行走入」。' },
+      '1-2': { title: '小組邀請新人：小組自行帶回關懷', step: '區塊一 - 分流分支 (A)', owner: '邀約人與該所屬小組', desc: '若新人是由特定小組或組員親自邀約而來，則該新人的一切會後接待與後續關懷完全由該小組自行負責，新家人同工完全不經手介入。' },
+      '1-3': { title: '自行走入新人：固定同工接待填卡', step: '區塊一 - 分流分支 (B)', owner: '固定新家人同工', desc: '若新朋友為自行前來教會，則由固定新家人同工親切迎接、引導填寫留名表並建檔。' },
+      '1-4': { title: '主日會後引薦對接', step: '區塊一 - 第二步', owner: '固定新家人同工 / 媒合小組', desc: '利用主日會後空檔，固定同工主動邀請經評估合適的小組長/小組代表前來與新朋友認識互動，建立第一步連結。' },
+      '1-5': { title: '同工追蹤 4週內', step: '區塊一 - 第三步', owner: '固定新家人同工', desc: '針對自行走入的新朋友，由固定新家人同工進行 4 週內初步關懷與適應評估，若出席穩定且融入則移交小組承接。' },
+      '1-6': { title: '評估穩定融入：小組承接常態關懷', step: '區塊一 - 決策分流 (是)', owner: '所屬小組長及組員', desc: '追蹤滿 4 週後評估適應良好。名單轉交小組長，小組正式承接後續的常態性牧養與關愛。' },
+      '1-7': { title: '列入請安拜訪：小組探訪與結案', step: '區塊一 - 決策分流 (否)', owner: '所屬小組 / 關懷牧養組', desc: '針對 4 週內未出席或不適應的新友，列入請安探訪名單，由小組或關懷同工進行最後探訪，並於系統中結案。' },
       '2-1': { title: '主日點名系統', step: '區塊二 - 第一步', owner: '行政組 / 各小組長', desc: '進入常態性的主日出席數據追蹤，每週日崇拜點名，由各小組回報出席狀況至系統，作為觀察依據。' },
       '2-2': { title: '1個月內出席狀況', step: '區塊二 - 第二步 (判斷點)', owner: '系統自動判定 / 牧養組', desc: '系統分析新成員在1個月內的出席次數與規律性，藉此分流：\n1. 若屬於第二次（含）以上出席 ➔ 判定為「標準件」。\n2. 若間隔超過1個月才再次出席 ➔ 判定為「觀察件」。' },
       '2-3': { title: '標準件：加入系統名單', step: '區塊二 - 決策分流 A', owner: '系統行政管理員', desc: '判定為標準關懷對象，名單正式匯入到常態小組追蹤及點名監控系統中，準備進入後期追蹤階段。' },
@@ -1704,7 +1742,7 @@
     };
 
     // Connections List
-    const connections = [
+    let connections = [
       { from: '1-1', to: '1-2', color: '#5f725a', type: 'right-to-left' },
       { from: '1-2', to: '1-4', color: '#5f725a', type: 'right-to-left' },
       { from: '1-4', to: '1-3', color: '#5f725a', type: 'right-to-left' },
@@ -1738,14 +1776,14 @@
       { number: '02', title: '教會關懷與牧養全流程圖解', subtitle: '視覺化呈現新家人來到教會到穩定落戶之標準化作業流程' },
       { number: '03', title: '宏觀總覽：生生不息的牧養全景圖', subtitle: '系統化關懷與常態牧養流程設計（溫暖畫布互動版）' },
       { number: '04', title: '關懷色彩計劃：在哪個階段接手？', subtitle: '藉由明確的角色分工與色彩管理，確保新人獲得最妥適的牧養支持' },
-      { number: '05', title: '區塊一細節：新家人接待與初步追蹤', subtitle: '從初次蒞臨到小組實體媒合，在黃金四週內建立初步信任與適應評估' },
-      { number: '06', title: '分流決策：4週結案評估分流', subtitle: '追蹤滿4週後進行分流判定，確保能即時將新人分派到小組' },
+      { number: '05', title: '區塊一細節：新家人接待與初步追蹤', subtitle: '從初次蒞臨到會後引薦對接小組，在黃金四週內建立初步信任與適應評估' },
+      { number: '06', title: '分流決策：4週結案評估分流', subtitle: '針對自行走入者於4週後進行評估；若連續4週未出席，則移交小組列入「請安拜訪」與探訪結案。' },
       { number: '07', title: '觸發矩陣：系統建檔觸發條件矩陣', subtitle: '藉由系統自動化判定出席規律性，將新成員進行分流判定' },
-      { number: '08', title: '區塊二細節：過渡期觀察與落戶確認', subtitle: '在轉介後的 1-2 個月過渡期內，小組長與新家人同工同步關心' },
+      { number: '08', title: '區塊二細節：過渡期觀察與落戶確認', subtitle: '在轉介後的 1-2 個月過渡期內由小組長主導關心，並於第 6 個月及年底進行落戶狀況再確認。' },
       { number: '09', title: '防護安全網：遲未落戶的異常提報', subtitle: '針對轉介後遲遲無法融入小組之會友，啟動滿3個月關懷轉介機制' },
       { number: '10', title: '區塊三細節：全體會友常態牧養監控機制', subtitle: '藉由常態監測大堂崇拜、主日學及小組出席數據，及早發掘出席率下滑' },
       { number: '11', title: '預警分流：有/無小組的處理路徑', subtitle: '當系統觀察到會友出席頻率下滑時，會依其是否歸屬於小組進行分流' },
-      { number: '12', title: '深度關懷對接：定期個案研討會', subtitle: '藉由小組長、區長與牧長團隊的定期會面，共同研討困難個案' },
+      { number: '12', title: '深度關懷對接：定期個案研討會', subtitle: '藉由小組長、區長與牧長團隊的定期會面，研討困難個案與定義關懷期限邊界（1-2年），防止小羊掉球並重新對接' },
       { number: '13', title: '系統運作總結：角色與時間對照矩陣', subtitle: '橫向整合四大關懷角色與不同時程任務，完整落實防護網架架構' }
     ];
 
@@ -1786,9 +1824,10 @@
     // Draw SVG connections
     function drawSVGConnections() {
       if (currentSlide !== 3) return;
+      updateDynamicConnections();
       const svg = document.getElementById('connection-svg');
       // Clear paths
-      svg.querySelectorAll('path, text').forEach(p => p.remove());
+      svg.querySelectorAll('.connector-path, text').forEach(p => p.remove());
 
       connections.forEach((conn) => {
         const fromEl = document.getElementById(`node-${conn.from}`);
@@ -2085,6 +2124,7 @@
       }
 
       // Highlight connections
+      updateDynamicConnections();
       connections.forEach(conn => {
         if (conn.from === id || conn.to === id) {
           const pathEl = document.getElementById(`path-${conn.from}-${conn.to}`);
@@ -2838,6 +2878,10 @@
       });
 
       document.body.classList.add('edit-mode');
+      document.querySelectorAll('.add-node-btn-group, .add-node-arrow, #add-block-container').forEach(el => el.classList.remove('hidden'));
+      makeCardsDraggable(true);
+      initDragAndDrop();
+      addDeleteButtons();
 
       // Update button
       const btn = document.getElementById('edit-mode-btn');
@@ -2880,6 +2924,9 @@
       document.getElementById('edit-mode-label').textContent = '編輯模式';
 
       document.getElementById('edit-toolbar').classList.remove('visible');
+      document.querySelectorAll('.add-node-btn-group, .add-node-arrow, #add-block-container').forEach(el => el.classList.add('hidden'));
+      makeCardsDraggable(false);
+      removeDeleteButtons();
     }
 
     function updateEditCount() {
@@ -2888,6 +2935,17 @@
     }
 
     function saveEdits() {
+      // 確保將 connections 陣列寫入 script tag 內容中
+      updateDynamicConnections();
+      const scriptEls = document.querySelectorAll('script');
+      scriptEls.forEach(script => {
+        if (script.textContent.includes('let connections =')) {
+          script.textContent = script.textContent.replace(
+            /let connections = \[\s*[\s\S]*?\s*\];/g,
+            `let connections = ${JSON.stringify(connections, null, 2)};`
+          );
+        }
+      });
       // Make all spans non-editable before capturing HTML
       document.querySelectorAll('[data-edit-key]').forEach(el => {
         el.contentEditable = 'false';
@@ -2932,6 +2990,502 @@
       setTimeout(() => { t.style.opacity = '0'; }, 2800);
       setTimeout(() => { t.remove(); }, 3200);
     }
+// ── Ultimate Slide 3 Drag-and-Drop, Rename and Recalculate System ────────
+let _activeTargetBlock = null;
+let _activeNodeType = 'normal';
+
+window.openAddNodeModal = function(blockId, nodeType) {
+  _activeTargetBlock = blockId;
+  _activeNodeType = nodeType;
+  
+  document.getElementById('new-node-type').value = nodeType;
+  document.getElementById('new-node-step').value = '';
+  document.getElementById('new-node-label').value = '';
+  document.getElementById('new-node-title').value = '';
+  document.getElementById('new-node-sub').value = '';
+  document.getElementById('new-node-icon').value = 'users';
+
+  if (nodeType === 'normal') {
+    document.getElementById('field-step-container').classList.remove('hidden');
+    document.getElementById('field-sub-container').classList.remove('hidden');
+    document.getElementById('field-icon-container').classList.remove('hidden');
+    document.getElementById('field-label-container').classList.add('hidden');
+  } else {
+    document.getElementById('field-step-container').classList.add('hidden');
+    document.getElementById('field-sub-container').classList.add('hidden');
+    document.getElementById('field-icon-container').classList.remove('hidden');
+    document.getElementById('field-label-container').classList.remove('hidden');
+  }
+
+  const modal = document.getElementById('add-node-modal');
+  modal.classList.remove('opacity-0', 'pointer-events-none');
+  modal.querySelector('#add-node-modal-content').classList.remove('scale-95');
+};
+
+window.closeAddNodeModal = function() {
+  const modal = document.getElementById('add-node-modal');
+  modal.classList.add('opacity-0', 'pointer-events-none');
+  modal.querySelector('#add-node-modal-content').classList.add('scale-95');
+  _activeTargetBlock = null;
+};
+
+window.confirmAddNode = function() {
+  if (!_activeTargetBlock) return;
+
+  const step = document.getElementById('new-node-step').value.trim() || 'New Step';
+  const branchLabel = document.getElementById('new-node-label').value.trim() || '分支';
+  const title = document.getElementById('new-node-title').value.trim() || '新步驟';
+  const sub = document.getElementById('new-node-sub').value.trim() || '說明';
+  const icon = document.getElementById('new-node-icon').value;
+
+  const blockNum = _activeTargetBlock.replace('block-', '');
+  const blockContainer = document.querySelector(`#${_activeTargetBlock} .flex.items-center`);
+  
+  if (!blockContainer) {
+    closeAddNodeModal();
+    return;
+  }
+
+  const existingNodes = document.querySelectorAll(`div[id^="node-${blockNum}-"]`);
+  let maxSubNum = 0;
+  existingNodes.forEach(node => {
+    const parts = node.id.split('-');
+    if (parts.length === 3 && parts[1] === blockNum) {
+      const subNum = parseInt(parts[2]);
+      if (!isNaN(subNum) && subNum > maxSubNum) {
+        maxSubNum = subNum;
+      }
+    }
+  });
+  const newSubNum = maxSubNum + 1;
+  const nid = `${blockNum}-${newSubNum}`;
+
+  let glowClass = 'glow-green';
+  let borderClass = 'border-emerald-500/25';
+  let textClass = 'text-emerald-700';
+  if (blockNum === '2') {
+    glowClass = 'glow-blue';
+    borderClass = 'border-blue-500/25';
+    textClass = 'text-blue-700';
+  } else if (blockNum === '3' || parseInt(blockNum) > 3) {
+    glowClass = 'glow-orange';
+    borderClass = 'border-amber-500/25';
+    textClass = 'text-orange-700';
+  }
+
+  let newHtml = '';
+  if (_activeNodeType === 'normal') {
+    newHtml = `
+      <div id="node-${nid}" class="glass-card ${glowClass} w-48 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 ${borderClass}" onclick="handleNodeClick(event, '${nid}')">
+        <div class="flex justify-between items-start">
+          <span class="text-[10px] ${textClass} font-semibold tracking-wider"><span data-edit-key="s3-node-${nid}-step">${step}</span></span>
+          <i data-lucide="${icon}" class="w-3.5 h-3.5 ${textClass}"></i>
+        </div>
+        <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><span data-edit-key="s3-node-${nid}-title">${title}</span></div>
+        <div class="text-[9px] text-stone-450 mt-1"><span data-edit-key="s3-node-${nid}-sub">${sub}</span></div>
+      </div>
+    `;
+  } else {
+    let outcomeLabelClass = (_activeNodeType === 'normal') ? 'text-emerald-800' : 'text-stone-500';
+    let outcomeTitleClass = (_activeNodeType === 'normal') ? 'text-stone-800' : 'text-stone-750';
+    newHtml = `
+      <div id="node-${nid}" class="glass-card ${glowClass} w-52 p-3.5 rounded-xl cursor-pointer flex flex-col justify-between h-[58px] ${borderClass.replace('25','20')}" onclick="handleNodeClick(event, '${nid}')">
+        <div class="flex justify-between items-center">
+          <div class="flex flex-col">
+            <span class="text-[9px] ${outcomeLabelClass} font-bold"><span data-edit-key="s3-node-${nid}-label">${branchLabel}</span></span>
+            <span class="text-xs font-bold ${outcomeTitleClass}"><span data-edit-key="s3-node-${nid}-title">${title}</span></span>
+          </div>
+          <i data-lucide="${icon}" class="w-3.5 h-3.5 ${textClass} shrink-0 ml-1"></i>
+        </div>
+      </div>
+    `;
+  }
+
+  const btnGroup = blockContainer.querySelector('.add-node-btn-group');
+  if (_activeNodeType === 'normal') {
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = newHtml;
+    blockContainer.insertBefore(tempDiv.firstElementChild, btnGroup);
+  } else {
+    let outcomeCol = blockContainer.querySelector('.flex-col:last-child');
+    if (!outcomeCol || !outcomeCol.classList.contains('flex-col')) {
+      outcomeCol = document.createElement('div');
+      outcomeCol.className = 'flex flex-col space-y-4';
+      blockContainer.appendChild(outcomeCol);
+    }
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = newHtml;
+    outcomeCol.appendChild(tempDiv.firstElementChild);
+  }
+
+  rebuildArrows(blockContainer);
+  recalculateStepNumbers();
+  updateDynamicConnections();
+  drawSVGConnections();
+
+  if (_editMode) {
+    document.querySelectorAll(`#node-${nid} [data-edit-key]`).forEach(el => {
+      _originalValues[el.dataset.editKey] = el.innerHTML;
+      el.contentEditable = 'true';
+      el.spellcheck = false;
+      el.addEventListener('keydown', preventEnterKey);
+    });
+    makeCardsDraggable(true);
+    initDragAndDrop();
+    addDeleteButtons();
+  }
+
+  closeAddNodeModal();
+  showToast('✅ 成功新增步驟/分支！可以直接在畫面上點擊編輯內容。');
+};
+
+window.addNewBlock = function() {
+  const title = prompt('請輸入新區塊的名稱：', '新區塊');
+  if (!title) return;
+
+  const canvas = document.getElementById('diagram-canvas');
+  const existingBlocks = canvas.querySelectorAll('section[id^="block-"]');
+  const newBlockNum = existingBlocks.length + 1;
+  const blockId = `block-${newBlockNum}`;
+  
+  const themeColors = {
+    badge_bg: 'bg-amber-50',
+    badge_border: 'border-amber-200',
+    badge_text: 'text-amber-700',
+    glow: 'glow-orange',
+    border: 'border-amber-500/25'
+  };
+
+  const sectionHtml = `
+    <section id="${blockId}" class="glass-panel section-3 rounded-2xl p-7 relative transition-opacity duration-300 w-max" onclick="handleBlockClick(event, '${blockId}')">
+      <div class="absolute -top-3 left-6 px-3 py-0.5 ${themeColors.badge_bg} border ${themeColors.badge_border} ${themeColors.badge_text} text-[10px] font-semibold rounded-full tracking-wider">
+        <span data-edit-key="s3-${blockId}-header">${title}</span>
+      </div>
+      
+      <div class="flex items-center space-x-8 pt-2">
+        <div id="node-${newBlockNum}-1" class="glass-card ${themeColors.glow} w-48 p-4 rounded-xl cursor-pointer flex flex-col justify-between h-28 ${themeColors.border}" onclick="handleNodeClick(event, '${newBlockNum}-1')">
+          <div class="flex justify-between items-start">
+            <span class="text-[10px] ${themeColors.badge_text} font-semibold tracking-wider"><span data-edit-key="s3-node-${newBlockNum}-1-step">01 / Start</span></span>
+            <i data-lucide="users" class="w-3.5 h-3.5 ${themeColors.badge_text}"></i>
+          </div>
+          <div class="font-bold text-xs text-stone-850 mt-2 leading-relaxed"><span data-edit-key="s3-node-${newBlockNum}-1-title">初始步驟</span></div>
+          <div class="text-[9px] text-stone-450 mt-1"><span data-edit-key="s3-node-${newBlockNum}-1-sub">說明</span></div>
+        </div>
+
+        <i data-lucide="arrow-right" class="w-4 h-4 text-stone-300 add-node-arrow hidden"></i>
+        <div class="flex items-center space-x-2 shrink-0 ml-4 add-node-btn-group hidden">
+          <button onclick="openAddNodeModal('${blockId}', 'normal')" class="border border-dashed border-amber-300 bg-white hover:bg-amber-50 text-amber-700 px-3 py-2 rounded-lg text-[10px] font-bold transition-all shadow-sm">
+            ＋ 往後插入方塊
+          </button>
+          <button onclick="openAddNodeModal('${blockId}', 'branch')" class="border border-dashed border-amber-300 bg-white hover:bg-amber-50 text-amber-700 px-3 py-2 rounded-lg text-[10px] font-bold transition-all shadow-sm">
+            ＋ 新增分支方塊
+          </button>
+        </div>
+      </div>
+    </section>
+  `;
+
+  const container = document.getElementById('add-block-container');
+  const tempDiv = document.createElement('div');
+  tempDiv.innerHTML = sectionHtml;
+  canvas.insertBefore(tempDiv.firstElementChild, container);
+
+  if (_editMode) {
+    document.querySelectorAll(`#node-${newBlockNum}-1 [data-edit-key]`).forEach(el => {
+      _originalValues[el.dataset.editKey] = el.innerHTML;
+      el.contentEditable = 'true';
+      el.spellcheck = false;
+      el.addEventListener('keydown', preventEnterKey);
+    });
+    makeCardsDraggable(true);
+    initDragAndDrop();
+    addDeleteButtons();
+    document.querySelectorAll('.add-node-btn-group, .add-node-arrow').forEach(el => el.classList.remove('hidden'));
+  }
+
+  lucide.createIcons();
+  updateDynamicConnections();
+  drawSVGConnections();
+  showToast('✅ 成功插入新區塊！');
+};
+
+// ── Drag and Drop ──
+let _draggedNode = null;
+
+window.initDragAndDrop = function() {
+  document.querySelectorAll('.glass-card').forEach(card => {
+    card.addEventListener('dragstart', handleDragStart);
+    card.addEventListener('dragover', handleDragOver);
+    card.addEventListener('drop', handleDrop);
+    card.addEventListener('dragend', handleDragEnd);
+  });
+};
+
+function handleDragStart(e) {
+  if (!_editMode) {
+    e.preventDefault();
+    return;
+  }
+  _draggedNode = this;
+  this.style.opacity = '0.4';
+  e.dataTransfer.effectAllowed = 'move';
+}
+
+function handleDragOver(e) {
+  if (!_editMode || !_draggedNode) return;
+  e.preventDefault();
+  e.dataTransfer.dropEffect = 'move';
+  
+  if (_draggedNode.parentNode !== this.parentNode) return;
+
+  const rect = this.getBoundingClientRect();
+  const relX = e.clientX - rect.left;
+  const isAfter = relX > rect.width / 2;
+
+  document.querySelectorAll('.glass-card').forEach(c => {
+    c.style.borderLeft = '';
+    c.style.borderRight = '';
+  });
+
+  if (this !== _draggedNode) {
+    if (isAfter) {
+      this.style.borderRight = '3px solid #f59e0b';
+    } else {
+      this.style.borderLeft = '3px solid #f59e0b';
+    }
+  }
+}
+
+function handleDrop(e) {
+  if (!_editMode || !_draggedNode || _draggedNode === this) return;
+  if (_draggedNode.parentNode !== this.parentNode) return;
+
+  const rect = this.getBoundingClientRect();
+  const relX = e.clientX - rect.left;
+  const isAfter = relX > rect.width / 2;
+
+  const container = this.parentNode;
+  
+  this.style.borderLeft = '';
+  this.style.borderRight = '';
+
+  if (isAfter) {
+    container.insertBefore(_draggedNode, this.nextSibling);
+  } else {
+    container.insertBefore(_draggedNode, this);
+  }
+
+  rebuildArrows(container);
+  recalculateStepNumbers();
+  updateDynamicConnections();
+  drawSVGConnections();
+}
+
+function handleDragEnd() {
+  if (_draggedNode) {
+    _draggedNode.style.opacity = '1';
+    _draggedNode = null;
+  }
+  document.querySelectorAll('.glass-card').forEach(c => {
+    c.style.borderLeft = '';
+    c.style.borderRight = '';
+  });
+}
+
+window.rebuildArrows = function(container) {
+  container.querySelectorAll(':scope > i[data-lucide="arrow-right"]').forEach(arrow => arrow.remove());
+
+  const mainNodes = Array.from(container.querySelectorAll(':scope > div[id^="node-"]'));
+  for (let i = 0; i < mainNodes.length - 1; i++) {
+    const arrow = document.createElement('i');
+    arrow.setAttribute('data-lucide', 'arrow-right');
+    arrow.className = 'w-4 h-4 text-stone-300 dynamic-arrow';
+    if (!_editMode) arrow.classList.add('hidden');
+    container.insertBefore(arrow, mainNodes[i+1]);
+  }
+  
+  const btnGroup = container.querySelector('.add-node-btn-group');
+  if (btnGroup && mainNodes.length > 0) {
+    const arrow = document.createElement('i');
+    arrow.setAttribute('data-lucide', 'arrow-right');
+    arrow.className = 'w-4 h-4 text-stone-300 add-node-arrow';
+    if (!_editMode) arrow.classList.add('hidden');
+    container.insertBefore(arrow, btnGroup);
+  }
+
+  lucide.createIcons();
+};
+
+window.recalculateStepNumbers = function() {
+  const allSections = Array.from(document.querySelectorAll('#diagram-canvas section[id^="block-"]'));
+  allSections.forEach((sec) => {
+    const blockNum = sec.id.replace('block-', '');
+    const mainNodes = Array.from(sec.querySelectorAll(`.flex.items-center > div[id^="node-${blockNum}-"]`));
+    mainNodes.forEach((node, idx) => {
+      const stepSpan = node.querySelector('[data-edit-key*="-step"]');
+      if (stepSpan) {
+        const txt = stepSpan.textContent.trim();
+        const num = idx + 1;
+        const prefix = num < 10 ? '0' + num : num;
+        const suffix = txt.includes('/') ? txt.split('/')[1].trim() : txt;
+        stepSpan.textContent = prefix + ' / ' + suffix;
+      }
+    });
+  });
+};
+
+window.makeCardsDraggable = function(status) {
+  document.querySelectorAll('.glass-card').forEach(card => {
+    if (status) {
+      card.setAttribute('draggable', 'true');
+    } else {
+      card.removeAttribute('draggable');
+    }
+  });
+};
+
+window.addDeleteButtons = function() {
+  document.querySelectorAll('.glass-card').forEach(card => {
+    if (!card.querySelector('.delete-node-btn') && card.id !== 'node-3-7') {
+      const btn = document.createElement('button');
+      btn.className = 'delete-node-btn absolute -top-1.5 -right-1.5 w-5 h-5 bg-red-500 hover:bg-red-650 text-white rounded-full flex items-center justify-center text-[9px] font-bold shadow-md transition-all z-40';
+      btn.innerHTML = '✕';
+      btn.onclick = (e) => {
+        e.stopPropagation();
+        deleteNode(card.id);
+      };
+      card.style.position = 'relative';
+      card.appendChild(btn);
+    }
+  });
+};
+
+window.removeDeleteButtons = function() {
+  document.querySelectorAll('.delete-node-btn').forEach(btn => btn.remove());
+};
+
+window.deleteNode = function(nodeId) {
+  if (!confirm('確定要刪除此步驟節點嗎？')) return;
+  const el = document.getElementById(nodeId);
+  if (!el) return;
+  
+  const container = el.parentNode;
+  el.remove();
+  
+  rebuildArrows(container);
+  recalculateStepNumbers();
+  updateDynamicConnections();
+  drawSVGConnections();
+  showToast('🗑️ 已刪除步驟節點。');
+};
+
+window.updateDynamicConnections = function() {
+  if (currentSlide !== 3) return;
+  
+  const newConns = [];
+  const colors = {
+    'block-1': '#5f725a',
+    'block-2': '#5b7086',
+    'block-3': '#c68a4c',
+    'loop': '#7c726a'
+  };
+
+  const allSections = Array.from(document.querySelectorAll('#diagram-canvas section[id^="block-"]'));
+  allSections.forEach((sec) => {
+    const blockNum = sec.id.replace('block-', '');
+    const theme = blockNum === '1' ? 'block-1' : (blockNum === '2' ? 'block-2' : 'block-3');
+    const color = colors[theme] || colors['block-3'];
+
+    const row = sec.querySelector('.flex.items-center');
+    if (!row) return;
+
+    // Get all children that are cards or column containers in visual order
+    const children = Array.from(row.children).filter(c => {
+      return (c.id && c.id.startsWith(`node-${blockNum}-`)) || c.classList.contains('flex-col');
+    });
+
+    for (let idx = 0; idx < children.length; idx++) {
+      const current = children[idx];
+      
+      // Case 1: Current is a main card
+      if (current.id && current.id.startsWith(`node-${blockNum}-`)) {
+        const next = children[idx + 1];
+        if (next) {
+          // If next is also a card, connect them directly
+          if (next.id && next.id.startsWith(`node-${blockNum}-`)) {
+            newConns.push({
+              from: current.id.replace('node-', ''),
+              to: next.id.replace('node-', ''),
+              color: color,
+              type: 'right-to-left'
+            });
+          }
+          // If next is a branch column, connect current to all cards in the column
+          else if (next.classList.contains('flex-col')) {
+            const colCards = Array.from(next.children).filter(c => c.id && c.id.startsWith(`node-${blockNum}-`));
+            colCards.forEach((c) => {
+              let label = '是';
+              const labelSpan = c.querySelector('[data-edit-key*="-label"]');
+              if (labelSpan) label = labelSpan.textContent.trim().split(' ')[0];
+              newConns.push({
+                from: current.id.replace('node-', ''),
+                to: c.id.replace('node-', ''),
+                color: color,
+                label: label,
+                type: 'diagonal-split'
+              });
+            });
+          }
+        }
+      }
+      // Case 2: Current is a branch column
+      else if (current.classList.contains('flex-col')) {
+        const colCards = Array.from(current.children).filter(c => c.id && c.id.startsWith(`node-${blockNum}-`));
+        const next = children[idx + 1];
+        
+        // Connect the FIRST card in the branch column to the next main node
+        if (colCards.length > 0 && next && next.id && next.id.startsWith(`node-${blockNum}-`)) {
+          newConns.push({
+            from: colCards[0].id.replace('node-', ''),
+            to: next.id.replace('node-', ''),
+            color: color,
+            type: 'right-to-left'
+          });
+        }
+      }
+    }
+  });
+
+  // Keep manual cross-block / loop connections
+  if (document.getElementById('node-3-2') && document.getElementById('node-3-1')) {
+    newConns.push({
+      from: '3-2',
+      to: '3-1',
+      color: colors['loop'],
+      label: '否',
+      type: 'loop-back'
+    });
+  }
+  if (document.getElementById('node-3-3') && document.getElementById('node-3-7')) {
+    newConns.push({
+      from: '3-3',
+      to: '3-7',
+      color: colors['block-3'],
+      label: '否'
+    });
+  }
+  if (document.getElementById('node-2-8') && document.getElementById('node-3-7')) {
+    newConns.push({
+      from: '2-8',
+      to: '3-7',
+      color: colors['block-3'],
+      type: 'top-to-bottom'
+    });
+  }
+
+  connections = newConns;
+};
+
   </script>
 </body>
 </html>
